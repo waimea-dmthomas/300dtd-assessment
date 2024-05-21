@@ -28,58 +28,58 @@ I propose a standalone forum which aims to facilitate discussion, teamwork and u
 
 ## Relevant Implications
 
-### IMPLICATION NAME HERE
+### Social Implications
 
-Replace this text with a clear explanation of what the implication means.
+The social implications of a website concern the impact the site has on its users, the wider community and society as a whole.
 
-Replace this text with an explanation of why the implication is relevant to this particular project.
+As a social platform, it is a responsibility that the website moderates and disproves of hateful behaviour, language and imagery and does not in any way offend or exclude based on gender, ethnicity, sexuality or religion etc. Users should be treated equally and hate should not be tolerated. Furthermore, the website should try to make a positive impact and foster community, belonging and kindness. 
 
-Replace this text with an explanation of what you will need to consider moving forward and how the project will be impacted by this implication.
+As a website focused around a game largely played by younger age groups, talk of adult content and profanity should be kept to a minimum and reasonably punished/moderated. Moderators should not have any biases toward certain users and treat all situations with justification and equality. The website should have the necessary functionality for a working moderation system including the option to remove content and ban users.
 
-### IMPLICATION NAME HERE
+### Aesthetic Implications
 
-Replace this text with a clear explanation of what the implication means.
+The aesthetic implications of a website relate to how it looks in terms of design.
 
-Replace this text with an explanation of why the implication is relevant to this particular project.
+It is necessary that the website looks presentable and visually interesting as to not put users off and make the website unenjoyable to use.
 
-Replace this text with an explanation of what you will need to consider moving forward and how the project will be impacted by this implication.
+The site's aesthetics should match the subject matter somewhat and this includes retro web aesthetics and old ROBLOX iconography. However, the website's visuals should consider users of all walks of life such as visually impaired. Ultimately, aesthetics should not interfere or take precedence over the functionality of the website or make it any harder to use. This includes layout, fonts and color.
 
-### IMPLICATION NAME HERE
+### Functionality Implications
 
-Replace this text with a clear explanation of what the implication means.
+The functionality implications of a website relate to how well it works for the end user, in terms of meeting its intended purpose.
 
-Replace this text with an explanation of why the implication is relevant to this particular project.
+Functionality is important to this website as it is any to ensure the user has a straight-forward experience when navigating and using the website. A non-functional website quickly turns users away and makes them not want to use it.
 
-Replace this text with an explanation of what you will need to consider moving forward and how the project will be impacted by this implication.
+When programming the website, careful consideration and rigorous testing should take place to iron out potential bugs and issues which users could encounter. The website should absolutely not crash and everything should function as intended.
 
 
 -------------------------------------------------
 
 ## Relevant User Experience (UX) Principles
 
-### UX PRINCIPLE NAME HERE
+### Visibility of System Status
 
-Replace this text with a clear explanation of what the UX design principle means.
+The system should always keep users updated and informed about progress and what is going on with appropriate feedback and a reasonable amount of time.
 
-Replace this text with an explanation of why the principle is relevant to this particular project.
+Users wont want to be uninformed on the status of the various systems at work on the website especially since it is a site for live discussion with other users, meaning things will have to work at a fast pace to stimulate discussion and activity. If users are unaware of the progress of something or if it is even progressing, this runs the risk of users simply leaving the website out of frustration or misunderstanding. Furthermore, if the website doesn't accurately give feedback to the user on an interaction this may lead to confusion or frustration on the user's end when they don't understand what they have done incorrectly.
 
-Replace this text with an explanation of what you will need to consider moving forward and how the project will be impacted by this principle.
+For example, the project may need to include progress bars/loading indicators for when things take time to upload/load, notification icons will need to tell you how many unread notifications the user has, timers which update users on the duration of bans and various other things that may include real-time progress. When forms are filled the site should respond timely with the status of their input (too many characters, invalid characters etc.).
 
-### UX PRINCIPLE NAME HERE
+### User Control and Freedom
 
-Replace this text with a clear explanation of what the UX design principle means.
+The system should always allow users to undo or back out of actions to give them a sense of freedom.
 
-Replace this text with an explanation of why the principle is relevant to this particular project.
+User control is very important to this site since most of what users post will be publicly visible to anyone who accesses the website. Therefore, when users input something that they don't want published, the site should let them undo their actions to avoid the risk of posting something unwanted or frustrations around having to completely restart their action.
 
-Replace this text with an explanation of what you will need to consider moving forward and how the project will be impacted by this principle.
+Users should be able to remove/undo parts of their posts without having to refresh the entire page, users should be able to delete their own posts etc.
 
-### UX PRINCIPLE NAME HERE
+### Help Users Recognize, Diagnose and Recover from Errors
 
-Replace this text with a clear explanation of what the UX design principle means.
+Error messages should be expressed in plain language, precisely indicate the problem and constructively suggest a solution.
 
-Replace this text with an explanation of why the principle is relevant to this particular project.
+Throughout the site, users may encounter various errors and it is important that the error messages are serviceable as to not alienate or confuse them. 
 
-Replace this text with an explanation of what you will need to consider moving forward and how the project will be impacted by this principle.
+When errors are encountered, the site should clearly display a pop-up or other obvious visual indicator that describes and highlights their error and offers the best solution for the user to resolve such error. This means not using error codes, 404 pages or other confusing dead ends. Errors should also try to retain as much progress as possible for the user so they don't end up having to rewrite things when they encounter an error.
 
 
 -------------------------------------------------
