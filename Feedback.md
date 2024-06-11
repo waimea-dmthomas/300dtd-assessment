@@ -1,6 +1,6 @@
 # Teacher Feedback on Documentation and Other Evidence
 
-> Good start, Daniel. Show suggestions / tweaks below. 
+> Good start, Daniel. Show suggestions / tweaks below.
 
 
 ## System Requirements	

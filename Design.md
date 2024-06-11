@@ -13,15 +13,28 @@ Assessment Standards: **91902** and **91903**
 
 ### Identified Need or Problem
 
-Since the closure of the official ROBLOX forums and the fragmentation of the old ROBLOX community into various Discord servers, groups and isolated communities, there has been no centralized place to share progress, foster discussion or present discoveries regarding the past. Many, many different projects are buried in the depths of year-old Discord chats, never to see the light of day again. 
+Since the closure of the official ROBLOX forums and the fragmentation of the old ROBLOX community into various Discord servers, groups and isolated communities, there has been no centralized place to share progress, foster discussion or present discoveries regarding the past. Many, many different projects are buried in the depths of year-old Discord chats, never to see the light of day again.
+
+The idea is that with a traditional web forum model, it will be easier to centralize specific discussions and directly work on problems with other users in a more professional and purpose-built manner.
 
 ### End-User Requirements
 
-The user base will be those who have come to the website presumably already involved or interested in old ROBLOX history and or preservation. Many of these people will be programmers who are familiar with LuaU and could come from any background, however most of these people will be ages 14-25ish.
+The user base will be those who have come to the website presumably already involved or interested in old ROBLOX history and or preservation. Many of these people will be programmers who are familiar with LuaU and could come from any background, however most of these people will be ages 14-25ish. Users will want the ability to open threads, share development updates and code, chat with other users and help each other with problems.
 
 ### Proposed Solution
 
 I propose a standalone forum which aims to facilitate discussion, teamwork and unity where projects can find their own threads and tangents have a place to flourish.
+
+Proposed features include:
+- Account sign up, sign in and logout
+- Account profile pages with user stats/info
+- Account deletion system
+- Secure account password hashing
+- Special account permissions i.e. administrator
+- Ability for administrators to remove threads/comments and ban users
+- Forum topics (sections i.e. development, off-topic etc.) that can be created by administrators
+- Forum threads that can be created by users with the ability to attach code excerpts/images and embed videos
+- Thread comment system
 
 
 -------------------------------------------------
@@ -51,6 +64,12 @@ The functionality implications of a website relate to how well it works for the 
 Functionality is important to this website as it is any to ensure the user has a straight-forward experience when navigating and using the website. A non-functional website quickly turns users away and makes them not want to use it.
 
 When programming the website, careful consideration and rigorous testing should take place to iron out potential bugs and issues which users could encounter. The website should absolutely not crash and everything should function as intended.
+
+### Usability Implications
+
+
+
+
 
 
 -------------------------------------------------

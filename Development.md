@@ -33,17 +33,19 @@ The DrawSQL "users" database now includes an admin column which is a boolean.
 
 ![Updated database](images/mysql-2.png)
 
-### 21/05/2024
+### 24/05/2024
 
-Replace this test with what you are working on
+![Figma design](images/figma.png)
 
-Replace this text with brief notes describing what you worked on, any decisions you made, any changes to designs, etc. Add screenshots / links to other media to illustrate your notes where necessary.
+**Figma website design prototype**
 
-> Replace this text with any user feedback / comments
+I began to work on the prototype layout and flow of the website using the site Figma.
 
-Replace this text with notes describing how you acted upon the user feedback: made changes to design, etc.
+I decided to prioritize the mobile design first and then I would do the desktop design later. This design also doesn't have a color scheme so I stuck to greys since it would make it easier to apply color palettes later. I also used lorem ipsum text and placeholder images/icons to demonstrate where text/images would occur while not breaking the flow of the site. I wanted to use simple and clear fonts for easy readability and I tried to fill as much of the screen as possible to not create dead space and for an efficient design.
 
-### DATE HERE
+I intend to present this design to my end-user for refinements and improvements as well as potential ideas for a color scheme and desktop design.
+
+### 31/05/2024
 
 Replace this test with what you are working on
 
