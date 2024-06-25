@@ -17,7 +17,11 @@ $users = $stmt->fetchAll();
 consoleLog($users, 'DB Data');
 
 foreach($users as $user) {
+
+    $iconURL = 'get-icon.php?id=' . $user['id'];
+
     echo '<article>';
+        echo '<img src="' . $iconURL . '">';
         echo $user['username'];
         if($user['admin']) echo '<img src="images/admin.png" width="25px">';
     echo '</article>';

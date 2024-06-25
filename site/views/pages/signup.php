@@ -2,6 +2,7 @@
     <form
         hx-post="/signup-user"
         hx-trigger="submit"
+        enctype="multipart/form-data"
     >
         <h2>Sign Up</h2>
 
@@ -12,7 +13,7 @@
         <input name="pass" type="password" required></input>
 
         <label>Icon</label>
-        <input name="pass" type="password" required></input>
+        <input name="icon" type="file" accept="image/*" required></input>
 
         <input type="submit" value="Sign Up">
 
