@@ -38,7 +38,6 @@ $router->route(GET, PAGE, '/',      'pages/forum.php');
 
 $router->route(GET, PAGE, '/users',      'pages/users.php');
 $router->route(GET, HTMX, '/list-users', 'components/list-users.php');
-$router->route(POST, HTMX, '/get-icon', 'actions/get-icon.php');
 
 $router->route(GET, PAGE, '/profile',      'pages/profile.php');
 

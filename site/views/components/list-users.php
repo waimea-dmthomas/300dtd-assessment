@@ -9,7 +9,7 @@ require_once 'lib/globals.php';
 $db = connectToDB();
 
 // Get all users
-$query = 'SELECT * FROM users ';
+$query = 'SELECT id, username, `admin`, moderator, iconFile, iconType FROM users ';
 $stmt = $db->prepare($query);
 $stmt->execute();
 $users = $stmt->fetchAll();
@@ -18,11 +18,15 @@ consoleLog($users, 'DB Data');
 
 foreach($users as $user) {
 
-    $iconURL = 'get-icon.php?id=' . $user['id'];
-
     echo '<article>';
-        echo '<img src="' . $iconURL . '">';
-        echo $user['username'];
-        if($user['admin']) echo '<img src="images/admin.png" width="25px">';
+        ?>
+            <img src="data:image/<?php $user["iconType"]?>;base64,<?php echo base64_encode($user["iconFile"]); ?>"
+            height="50"
+            width="50"
+            alt="<?php $user["username"] . "'s Icon" ?>"
+        ><?php
+
+        echo ' ' . $user['username'] . ' ';
+        if($user['admin']) echo '<img src="images/admin.png" width="25px" title="Admin">';
     echo '</article>';
 }
