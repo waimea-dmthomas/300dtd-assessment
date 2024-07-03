@@ -6,11 +6,9 @@
         hx-trigger="submit"
     >
 
-        <label>Username</label>
-        <input name="username" type="text" required>
+        <input name="username" type="text" placeholder="Username" required>
 
-        <label>Password</label>
-        <input name="password" type="password" required>
+        <input name="password" type="password" placeholder="Password" required>
 
         <input type="submit" value="Login">
 

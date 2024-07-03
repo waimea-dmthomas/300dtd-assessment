@@ -57,7 +57,18 @@ echo '<table id="main-users">';
             echo '</td>';
 
             echo '<td>';
-            echo ' ' . '<a href="delete-user.php?id=' . $user['id'] . '"onclick="return confirm(`Are you sure?`)">X</a>';
+                ?>
+                    <p>
+                        <button
+                            hx-delete="/user/<?= $id ?>"
+                            hx-confirm="Really delete this user?"
+                            class="danger"
+                        >
+                            Delete User
+                        
+                        </button>
+                    </p>
+                <?php
             echo '</td>';
 
         echo '</tr>';

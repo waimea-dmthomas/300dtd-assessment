@@ -35,11 +35,15 @@ $router = new Router(['debug' => true]);
 // Define routes
 
 $router->route(GET, PAGE, '/',      'pages/forum.php');
+$router->route(GET, HTMX, '/list-categories', 'components/list-categories.php');
+$router->route(GET, HTMX, '/add-category-form', 'components/add-category-form.php');
+$router->route(POST, HTMX, '/add-category', 'actions/add-category.php');
 
 $router->route(GET, PAGE, '/users',      'pages/users.php');
 $router->route(GET, HTMX, '/list-users', 'components/list-users.php');
 
 $router->route(GET, PAGE, '/profile',      'pages/profile.php');
+$router->route(GET, HTMX, '/show-profile',      'components/show-profile.php');
 
 $router->route(GET, PAGE, '/login', 'pages/login.php');
 $router->route(POST, HTMX, '/login-user', 'actions/login-user.php');
@@ -50,6 +54,7 @@ $router->route(POST, HTMX, '/signup-user', 'actions/signup-user.php');
 
 $router->route(GET, PAGE, '/admin', 'pages/admin.php');
 $router->route(GET, HTMX, '/admin-panel', 'components/admin-panel.php');
+$router->route(DELETE, HTMX, '/delete-user/$id', 'actions/delete-user.php');
 
 
 //-------------------------------------------------------------
