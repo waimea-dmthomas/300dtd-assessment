@@ -2,6 +2,8 @@
     <h2>Login</h2>
 
     <form
+        hx-swap="innerHTML"
+        hx-target="#message"
         hx-post="/login-user" 
         hx-trigger="submit"
     >
@@ -13,5 +15,6 @@
         <input type="submit" value="Login">
 
     </form>
-    <p>No account? <a href="/signup">Sign Up</a></p>
+    <div id="message"></div>
+    <p>No account? <a href="/signup"><button>Sign Up</button></a></p>
 </article>

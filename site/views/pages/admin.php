@@ -1,7 +1,7 @@
 <h1>Admin</h1>
 
-<section  
+<div  
     hx-get="/admin-panel"
     hx-trigger="load"
 >
-</section>
+</div>

@@ -1,5 +1,7 @@
-<article>
+<article id="login-form">
     <form
+        hx-swap="innerHTML"
+        hx-target="#message"
         hx-post="/signup-user"
         hx-trigger="submit"
         enctype="multipart/form-data"
@@ -18,4 +20,5 @@
         <input type="submit" value="Sign Up">
 
     </form>
+    <div id="message"></div>
 </article>

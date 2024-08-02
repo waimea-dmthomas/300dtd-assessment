@@ -26,7 +26,7 @@ foreach($users as $user) {
             alt="<?php $user["username"] . "'s Icon" ?>"
         ><?php
 
-        echo ' ' . $user['username'] . ' ';
+        echo ' ' . '<a href="/profile/' . $user['id'] . '">' . $user['username'] . '</a>' . ' ';
         if($user['admin']) echo '<img src="images/admin.png" width="25px" title="Admin">';
     echo '</article>';
 }

@@ -2,8 +2,6 @@
 
 <?php
 
-// if (!$isAdmin) header('HX-Redirect: ' . SITE_BASE . '/');
-
 require_once 'lib/db.php';
 
 // Get data from the form

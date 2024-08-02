@@ -60,7 +60,7 @@ echo '<table id="main-users">';
                 ?>
                     <p>
                         <button
-                            hx-delete="/user/<?= $id ?>"
+                            hx-delete="/delete-user/<?= $user['id'] ?>"
                             hx-confirm="Really delete this user?"
                             class="danger"
                         >

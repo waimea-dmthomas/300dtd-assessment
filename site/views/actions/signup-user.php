@@ -23,8 +23,8 @@ if( $iconType != 'image/svg+xml' ) {
 // Check the image is of a suitable type
 if( $iconType != 'image/svg+xml' &&
     $iconType != 'image/png'     &&
-    $iconType != 'image/jpeg'    &&    
-    $iconType != 'image/gif'     &&    
+    $iconType != 'image/jpeg'    &&
+    $iconType != 'image/gif'     &&
     $iconType != 'image/webp' ) die( 'Only images are allowed' );
 
 // Hash the supplied password
@@ -51,11 +51,15 @@ if (!$userData) {
     $stmt = $db->prepare($query);
     $stmt->execute([$user, $hash, $iconData, $iconType]);
 
-    echo '<h2>Account Created!</h2>';
-    // Login page link
-    echo '<h3><a href="login">Login</a></h3>';
+    ?>
+        <section  
+            hx-get="/login-complete"
+            hx-swap="innerHTML"
+            hx-target="#login-form"
+            hx-trigger="load"
+        ></section>
+    <?php
 }
 else {
-    echo '<h2>Username taken!</h2>';
-    echo '<h3><a href="signup">Try again</a></h3>';
+    echo '<p>Username taken!</p>';
 }

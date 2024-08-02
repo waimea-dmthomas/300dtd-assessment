@@ -1,6 +1,6 @@
 <h1>Categories</h1>
 
-<section  
+<section 
     hx-get="/list-categories"
     hx-trigger="load"
 >

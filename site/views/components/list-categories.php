@@ -9,7 +9,7 @@ require_once 'lib/globals.php';
 $db = connectToDB();
 
 // Get all categories
-$query = 'SELECT * FROM categories ';
+$query = 'SELECT * FROM categories';
 $stmt = $db->prepare($query);
 $stmt->execute();
 $categories = $stmt->fetchAll();
@@ -17,5 +17,5 @@ $categories = $stmt->fetchAll();
 consoleLog($categories, 'DB Data');
 
 foreach($categories as $category) {
-    echo '<a href="/' . $category['title'] . '" role="button">' . $category['title'] . '</a>';
+    echo '<a href="/category/' . $category['id'] . '" role="button">' . $category['title'] . '</a>';
 }

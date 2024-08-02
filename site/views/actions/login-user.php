@@ -30,9 +30,9 @@ if ($userData) {
         header('HX-Redirect: ' . SITE_BASE);
     }
     else {
-        echo '<h2>Incorrect password!</h2>';
+        echo '<p>Incorrect password!</p>';
     }
 }
 else {
-    echo '<h2>User account does not exist!</h2>';
+    echo "<p>This account doesn't exist!</p>";
 }
