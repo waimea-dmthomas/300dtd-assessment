@@ -30,6 +30,7 @@ foreach($users as $user) {
                 echo '<div id="profile-header-name">';
                     echo ' ' . $user['username'] . "'s Profile" . ' ';
                     if($user['admin']) echo '<img id="admin-icon" src="../images/admin.png" width="25px" title="Admin">';
+                    if($user['moderator']) echo '<img id="moderator-icon" src="../images/moderator.png" width="25px" title="Moderator">';
                 echo '</div>';
 
                 echo '<i>' . $user['status'] . '</i>';
@@ -49,6 +50,7 @@ foreach($users as $user) {
             ><?php
 
             echo '<div id="profile-info">';
+                echo '<p>Member since: ' . $user['joined'] . '</p>';
                 echo '<p>Topics opened: ' . $stmt2->rowCount() . '</p>';
                 echo '<p>Comments left: 0</p>';
             echo '</div>';

@@ -32,28 +32,50 @@ echo '<table id="main-users">';
 
             echo '<td>';
                 echo $user['username'];
+                if($user['admin']) echo ' <img src="images/admin.png" width="25px" title="Admin">';
+                if($user['moderator']) echo ' <img src="images/moderator.png" width="25px" title="Moderator">';
             echo '</td>';
 
             echo '<td>';
-                if ($isAdmin) {
-                    if($user['admin']) echo ' ' . '<a href="process-admin.php?id=' . $user['id'] . '">Yes</a>';
-                    else echo  ' ' . '<a href="process-admin.php?id=' . $user['id'] . '">No</a>';
-                }
-                else {
-                    if($user['admin']) echo ' ' . '<p>Yes</p>';
-                    else echo  ' ' . '<p>No</p>';
-                }
+                ?>
+                    <p>
+                        <button
+                            hx-put="/process-admin/<?= $user['id'] ?>"
+                            hx-confirm="Really give admin permissions to this user?"
+                            class="danger"
+                        >
+                            <?php
+                                if ($user['admin']) {
+                                    echo 'Yes';
+                                }
+                                else {
+                                    echo 'No';
+                                }
+                            ?>
+                        </button>
+                    </p>
+                <?php
             echo '</td>';
 
             echo '<td>';
-                if ($isAdmin) {
-                    if($user['moderator']) echo ' ' . '<a href="process-moderator.php?id=' . $user['id'] . '">Yes</a>';
-                    else echo  ' ' . '<a href="process-moderator.php?id=' . $user['id'] . '">No</a>';
-                }
-                else {
-                    if($user['moderator']) echo ' ' . '<p>Yes</p>';
-                    else echo  ' ' . '<p>No</p>';
-                }
+                ?>
+                    <p>
+                        <button
+                            hx-put="/process-moderator/<?= $user['id'] ?>"
+                            hx-confirm="Really give moderator permissions to this user?"
+                            class="danger"
+                        >
+                            <?php
+                                if ($user['moderator']) {
+                                    echo 'Yes';
+                                }
+                                else {
+                                    echo 'No';
+                                }
+                            ?>
+                        </button>
+                    </p>
+                <?php
             echo '</td>';
 
             echo '<td>';

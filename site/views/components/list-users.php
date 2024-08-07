@@ -28,5 +28,6 @@ foreach($users as $user) {
 
         echo ' ' . '<a href="/profile/' . $user['id'] . '">' . $user['username'] . '</a>' . ' ';
         if($user['admin']) echo '<img src="images/admin.png" width="25px" title="Admin">';
+        if($user['moderator']) echo '<img src="images/moderator.png" width="25px" title="Moderator">';
     echo '</article>';
 }

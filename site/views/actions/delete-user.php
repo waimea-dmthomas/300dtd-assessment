@@ -1,3 +1,5 @@
+<!-- Delete selected user's account -->
+
 <?php
 
 require_once 'lib/db.php';

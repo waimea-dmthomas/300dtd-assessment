@@ -25,19 +25,19 @@ if($stmt->rowCount() > 0) {
         $stmt2->execute();
         $user = $stmt2->fetch();
 
-        echo '<article>';
+        echo '<a role="button" id="topic-article" href="/topic/' . $topic['id'] . '">';
             echo '<h1>' . $topic['title'] . '</h1>';
 
-            echo '<div id="topic-body">';
+            echo '<article id="topic-body">';
                 echo '<p>' . $topic['body'] . '</p>';
-                
-                echo '<div id="topic-op">';
-                    echo '<p>Posted by <a href="/profile/' . $user['id'] . '">' . $user['username'] . '</a></p>';
-                    if($user['admin']) echo '<img id="admin-icon" src="../images/admin.png" width="25px" title="Admin">';
-                echo '</div>';
+            echo '</article>';
 
+            echo '<div id="topic-op">';
+                echo '<p>Posted by ' . $user['username'] . '</p>';
+                // <a href="/profile/' . $user['id'] . '">' . $user['username'] . '</a>
+                if($user['admin']) echo '<img id="admin-icon" src="../images/admin.png" width="25px" title="Admin">';
             echo '</div>';
-        echo '</article>';
+        echo '</a>';
     }
     echo '<p><b>' . $stmt->rowCount() . '</b> topics thus far!</p>';
 } else {

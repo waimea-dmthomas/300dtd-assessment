@@ -99,7 +99,7 @@ main {
     margin-left: auto;
 }
 
-#admin-icon {
+#admin-icon, #moderator-icon {
     margin-left: 0.2rem;
     height: 100%;
 }
@@ -124,15 +124,36 @@ main {
 
 /* CATEGORY ---------------------------------------- */
 
+#topic-article {
+    background-color: lightgrey;
+    border: 0;
+    color: black;
+}
+
+#topic-article:hover {
+    transform: scale(105%);
+    transition: 0.1s;
+}
+
 #topic-body {
+    background-color: grey;
+    border: 0;
     display: flex;
     flex-direction: column;
     gap: 0.2rem;
 }
 
+#topic-body p {
+    color: black
+}
+
 #topic-op {
     display: flex;
     align-items: center;
+}
+
+#topic-op p {
+    color: black;
 }
 
 /* LAYOUT ---------------------------------------- */

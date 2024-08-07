@@ -34,6 +34,9 @@ consoleLog($hash, 'Hashed Password');
 // Get uploaded image data
 $iconData = file_get_contents($iconFile);
 
+// Timestamp join date
+$joined = date("j/" . "m/" . "Y");
+
 // Connect
 $db = connectToDB();
 
@@ -45,11 +48,11 @@ $userData = $stmt->fetch();
 
 if (!$userData) {
     // Add the user account
-    $query = 'INSERT INTO users(username, hash, iconFile, iconType)
-    VALUES (?, ?, ?, ?)';
+    $query = 'INSERT INTO users(username, hash, iconFile, iconType, joined)
+    VALUES (?, ?, ?, ?, ?)';
 
     $stmt = $db->prepare($query);
-    $stmt->execute([$user, $hash, $iconData, $iconType]);
+    $stmt->execute([$user, $hash, $iconData, $iconType, $joined]);
 
     ?>
         <section  

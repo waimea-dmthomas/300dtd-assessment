@@ -45,6 +45,8 @@ $router->route(GET, HTMX, '/list-topics/$id', 'components/list-topics.php');
 $router->route(GET, HTMX, '/add-topic-form/$id',      'components/add-topic-form.php');
 $router->route(POST, HTMX, '/add-topic/$category', 'actions/add-topic.php');
 
+$router->route(GET, PAGE, '/topic/$id',      'pages/topic.php');
+
 $router->route(GET, PAGE, '/users',      'pages/users.php');
 $router->route(GET, HTMX, '/list-users', 'components/list-users.php');
 
@@ -62,6 +64,8 @@ $router->route(POST, HTMX, '/signup-user', 'actions/signup-user.php');
 $router->route(GET, PAGE, '/admin', 'pages/admin.php');
 $router->route(GET, HTMX, '/admin-panel', 'components/admin-panel.php');
 $router->route(DELETE, HTMX, '/delete-user/$id', 'actions/delete-user.php');
+$router->route(PUT, HTMX, '/process-admin/$id', 'actions/process-admin.php');
+$router->route(PUT, HTMX, '/process-moderator/$id', 'actions/process-moderator.php');   
 
 
 //-------------------------------------------------------------
