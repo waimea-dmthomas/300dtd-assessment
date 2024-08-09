@@ -46,12 +46,16 @@ $router->route(GET, HTMX, '/add-topic-form/$id',      'components/add-topic-form
 $router->route(POST, HTMX, '/add-topic/$category', 'actions/add-topic.php');
 
 $router->route(GET, PAGE, '/topic/$id',      'pages/topic.php');
+$router->route(GET, HTMX, '/list-comments/$id',      'components/list-comments.php');
+$router->route(GET, HTMX, '/add-comment-form/$id',      'components/add-comment-form.php');
+$router->route(POST, HTMX, '/add-comment/$topic',      'actions/add-comment.php');
 
 $router->route(GET, PAGE, '/users',      'pages/users.php');
 $router->route(GET, HTMX, '/list-users', 'components/list-users.php');
 
 $router->route(GET, PAGE, '/profile/$id',      'pages/profile.php');
 $router->route(GET, HTMX, '/edit-profile/$id',      'components/edit-profile.php');
+$router->route(PUT, HTMX, '/process-edit-profile/$id', 'actions/process-edit-profile.php');
 
 $router->route(GET, PAGE, '/login', 'pages/login.php');
 $router->route(POST, HTMX, '/login-user', 'actions/login-user.php');

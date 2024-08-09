@@ -20,6 +20,20 @@ foreach($topics as $topic) {
 
     echo '<article>';
         echo '<h1>Comments</h1>';
+
+        ?>
+            <div  
+                hx-get="/add-comment-form/<?=$id?>"
+                hx-trigger="load"
+            >
+            </div>
+
+            <div  
+                hx-get="/list-comments/<?=$id?>"
+                hx-trigger="load"
+            >
+            </div>
+        <?php
     echo '</article>';
 }
 

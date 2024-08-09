@@ -22,6 +22,12 @@ foreach($users as $user) {
     $stmt2->execute();
     $topic = $stmt2->fetch();
 
+    // Get amount of comments
+    $query3 = "SELECT * FROM comments WHERE op = '$id'";
+    $stmt3 = $db->prepare($query3);
+    $stmt3->execute();
+    $topic = $stmt3->fetch();
+
     echo '<article id="profile-article">';
         echo '<header id="profile-header">';
 
@@ -52,7 +58,7 @@ foreach($users as $user) {
             echo '<div id="profile-info">';
                 echo '<p>Member since: ' . $user['joined'] . '</p>';
                 echo '<p>Topics opened: ' . $stmt2->rowCount() . '</p>';
-                echo '<p>Comments left: 0</p>';
+                echo '<p>Comments left: ' . $stmt3->rowCount() . '</p>';
             echo '</div>';
 
         echo '</div>';

@@ -14,7 +14,10 @@ $categories = $stmt->fetchAll();
 
 foreach($categories as $category) {
     echo '<article id="topics">';
-        echo '<h1>' . $category['title'] . '</h1>';
+        echo '<div id="category-header">'
+            ?> <a role="button" href="/" id="back-button">◀</a><?php
+            echo '<h1>' . $category['title'] . '</h1>';
+        echo '</div>'
 
         ?> <section 
             hx-get="/list-topics/<?=$category['id']?>"

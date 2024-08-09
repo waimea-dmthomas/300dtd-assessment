@@ -18,6 +18,10 @@ p {
     margin: 0;
 }
 
+#back-button {
+    margin-right: 1rem;
+}
+
 
 /* HEADER ---------------------------------------- */
 
@@ -97,6 +101,13 @@ main {
 
 #edit-profile {
     margin-left: auto;
+    margin-bottom: 0;
+    width: fit-content;
+    height: fit-content;
+}
+
+#edit-profile-cancel {
+    margin-left: 1rem;
 }
 
 #admin-icon, #moderator-icon {
@@ -123,6 +134,16 @@ main {
 }
 
 /* CATEGORY ---------------------------------------- */
+
+#category-header {
+    display: flex;
+    padding-bottom: 1rem;
+    align-items: center;
+}
+
+#category-header h1 {
+    margin: 0;
+}
 
 #topic-article {
     background-color: lightgrey;
