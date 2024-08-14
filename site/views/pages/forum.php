@@ -1,4 +1,4 @@
-<h1>Categories</h1>
+<h1>Forum</h1>
 
 <section 
     hx-get="/list-categories"

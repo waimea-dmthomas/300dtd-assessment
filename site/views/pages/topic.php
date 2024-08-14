@@ -18,17 +18,47 @@ foreach($topics as $topic) {
         echo '<p>' . $topic['body'] . '</p>';   
     echo '</article>';
 
+    if($isAdmin):
+        echo '<article id="topic-admin-panel">';
+        ?>
+            <button
+                hx-put="/process-lock-topic/<?= $topic['id'] ?>"
+            >
+                <?php
+                    if ($topic['locked']) {
+                        echo 'Unlock Topic';
+                    }
+                    else {
+                        echo 'Lock Topic';
+                    }
+                ?>
+            </button>
+
+            <button
+                hx-delete="/delete-topic/<?= $topic['id'] ?>"
+                hx-confirm="Really delete this topic?"
+                class="danger"
+            >
+                <?php
+                    echo 'Delete Topic'
+                ?>
+            </button>
+        <?php
+        echo '</article>';
+    endif;
+
     echo '<article>';
         echo '<h1>Comments</h1>';
 
+        if($topic['locked']) echo '<b>This topic is locked!</b>';
+        elseif($isLoggedIn) echo '<div  
+        hx-get="/add-comment-form/<?=$id?>"
+        hx-trigger="load"></div>';
+        else echo '<p id="add-topic-button"><a href="../login">Login</a> or <a href="../signup">Sign Up</a> to add a comment!</p>';
+        
         ?>
             <div  
-                hx-get="/add-comment-form/<?=$id?>"
-                hx-trigger="load"
-            >
-            </div>
-
-            <div  
+                id="comments-div"
                 hx-get="/list-comments/<?=$id?>"
                 hx-trigger="load"
             >

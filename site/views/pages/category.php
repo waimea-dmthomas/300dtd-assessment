@@ -17,17 +17,18 @@ foreach($categories as $category) {
         echo '<div id="category-header">'
             ?> <a role="button" href="/" id="back-button">◀</a><?php
             echo '<h1>' . $category['title'] . '</h1>';
-        echo '</div>'
 
-        ?> <section 
+            if($isLoggedIn) { ?>
+                <button id="add-topic-button" hx-get="/add-topic-form/<?=$category['id']?>" hx-target="#topics" hx-swap="outerHTML">New Topic</button> 
+            <?php }
+            else {
+                echo '<p id="add-topic-button"><a href="../login">Login</a> or <a href="../signup">Sign Up</a> to open a topic!</p>';
+            }
+        echo '</div>';
+
+        ?> <div 
             hx-get="/list-topics/<?=$category['id']?>"
             hx-trigger="load">
-        </section> <?php
-        
-        if ($isLoggedIn): ?>
-            <button id="add-topic-button" hx-get="/add-topic-form/<?=$category['id']?>" hx-target="#topics" hx-swap="outerHTML">New Topic</button> 
-        <?php endif;        
+        </div> <?php
     echo '</article>';
 }
-
-

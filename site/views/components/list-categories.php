@@ -18,4 +18,5 @@ consoleLog($categories, 'DB Data');
 
 foreach($categories as $category) {
     echo '<a href="/category/' . $category['id'] . '" role="button">' . $category['title'] . '</a>';
+    echo '<p>' . $category['description'] . '</p>';
 }

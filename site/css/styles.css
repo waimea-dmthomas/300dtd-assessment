@@ -177,6 +177,24 @@ main {
     color: black;
 }
 
+#add-topic-button {
+    margin-left: auto;
+}
+
+/* TOPIC ---------------------------------------- */
+
+#topic-admin-panel {
+    display: flex;
+}
+
+#topic-admin-panel button {
+    margin-right: 1rem;
+}
+
+#comments-div {
+    margin-top: 1rem;
+}
+
 /* LAYOUT ---------------------------------------- */
 
 section {

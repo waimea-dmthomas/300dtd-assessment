@@ -44,6 +44,8 @@ $router->route(GET, PAGE, '/category/$id',      'pages/category.php');
 $router->route(GET, HTMX, '/list-topics/$id', 'components/list-topics.php');
 $router->route(GET, HTMX, '/add-topic-form/$id',      'components/add-topic-form.php');
 $router->route(POST, HTMX, '/add-topic/$category', 'actions/add-topic.php');
+$router->route(PUT, HTMX, '/process-lock-topic/$id', 'actions/process-lock-topic.php');
+$router->route(DELETE, HTMX, '/delete-topic/$id', 'actions/delete-topic.php');
 
 $router->route(GET, PAGE, '/topic/$id',      'pages/topic.php');
 $router->route(GET, HTMX, '/list-comments/$id',      'components/list-comments.php');
