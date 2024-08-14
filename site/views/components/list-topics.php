@@ -28,6 +28,7 @@ if($stmt->rowCount() > 0) {
 
             echo '<a role="button" id="topic-article" href="/topic/' . $topic['id'] . '">';
                 echo '<h1>' . $topic['title'] . '</h1>';
+                if($topic['locked']) echo '<b>🔒</b>';
 
                 echo '<article id="topic-body">';
                     echo '<p>' . $topic['body'] . '</p>';
