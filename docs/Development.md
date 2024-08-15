@@ -11,19 +11,19 @@ Assessment Standards: **91902** and **91903**
 
 ## Design, Development and Testing Log
 
-### 16/05/24
+## 16/05/24
 
 ![Database](images/mysql.png)
 
-**Planning the database in DrawSQL**
+### **Planning the database in DrawSQL**
 
 I began working on planning the potential database using DrawSQL. This will be used as a framework for what the actual database may function like and look like in MySQL clearly and concisely. I gave "forum topics" (sections i.e. general, off-topic) their own database instead of being a column under threads because this means admins could add new topics to the site through an admin menu, instead of having to hardcode it in the sites HTML/CSS.
 
-### 17/05/24
+## 17/05/24
 
 ![Excalidraw flowchart](images/flowchart.png)
 
-**Excalidraw flowchart prototype**
+### **Excalidraw flowchart prototype**
 
 I started working on a flowchart in Excalidraw which illustrates how the website will flow and function on a base level. The yellow circles represent where the user starts, blue squares are pages, purple diamonds are header buttons and red/green boxes are functional buttons.
 
@@ -33,11 +33,11 @@ The DrawSQL "users" database now includes an admin column which is a boolean.
 
 ![Updated database](images/mysql-2.png)
 
-### 24/05/2024
+## 24/05/2024
 
 ![Figma design](images/figma.png)
 
-**Figma website design prototype**
+### **Figma website design prototype**
 
 I began to work on the prototype layout and flow of the website using the site Figma.
 
@@ -45,32 +45,75 @@ I decided to prioritize the mobile design first and then I would do the desktop 
 
 I intend to present this design to my end-user for refinements and improvements as well as potential ideas for a color scheme and desktop design.
 
-### 31/05/2024
+## 31/05/2024
 
-Replace this test with what you are working on
+> ![alt text](image.png)
+> ![alt text](image-1.png)
+> ![alt text](image-5.png)
 
-Replace this text with brief notes describing what you worked on, any decisions you made, any changes to designs, etc. Add screenshots / links to other media to illustrate your notes where necessary.
+### **Figma website design prototype 2**
 
-> Replace this text with any user feedback / comments
+After presenting the design to my end users, I recieved some feedback on the design.
 
-Replace this text with notes describing how you acted upon the user feedback: made changes to design, etc.
+They felt that the gradient made the UI look slightly outdated and that it should be up to modern design principles, so I toned down the gradient effect on the background and the header. They also felt that the buttons shouldn't be at the top from a user experience perspective, so I moved them down to the bottom.
 
-### DATE HERE
+![alt text](image-4.png)
 
-Replace this test with what you are working on
+### **Figma desktop design prototype**
 
-Replace this text with brief notes describing what you worked on, any decisions you made, any changes to designs, etc. Add screenshots / links to other media to illustrate your notes where necessary.
+I also began working on the desktop version of the design. I wanted a layout reminiscent of old web forums but with updated visuals and useability adhering to the useability heuristics. I created a table-like design for the forum category selection menu.
 
-> Replace this text with any user feedback / comments
+![alt text](image-6.png)
 
-Replace this text with notes describing how you acted upon the user feedback: made changes to design, etc.
+## 02/05/2024
 
-### DATE HERE
+I sent the new mobile design back to my end users who were overall happy with the design meaning I could move forward to doing the color palette.
 
-Replace this test with what you are working on
+> ![alt text](image-9.png)
 
-Replace this text with brief notes describing what you worked on, any decisions you made, any changes to designs, etc. Add screenshots / links to other media to illustrate your notes where necessary.
+I then got some feedback for the desktop design and required a few little tweaks.
 
-> Replace this text with any user feedback / comments
+> ![alt text](image-14.png)
 
-Replace this text with notes describing how you acted upon the user feedback: made changes to design, etc.
+I also began to work on a color palette for the site:
+
+![alt text](image-8.png)
+
+### Color palette
+
+I came up with this color palette and sent it to my end users. I selected these colors because the darker palette is easy on the eyes and the text is nice and contrasted to the dark background. Not to mention, the foreground elements stand out a lot compared to the background which helps with readability. The orange accent is for when buttons and such are hovered over and massively contrasts with the blue, as orange opposes blue on a color wheel.
+
+## 03/05/2024
+
+> ![alt text](image-10.png)
+> ![alt text](image-11.png)
+> ![alt text](image-13.png)
+
+I sent the color palette to my end users for feedback. They suggested to make it similar to Discord's color palette, which is a little more muted and maybe easier to read. They weren't a big fan of the shade of blue I used too.
+
+I came up with a new color palette that's a little toned down:
+
+![alt text](image-16.png)
+
+I also updated the desktop design following the feedback I received:
+
+![alt text](image-18.png)
+
+## 04/05/2024
+
+I got some feedback on the new color palette:
+
+> ![alt text](image-15.png)
+> ![alt text](image-17.png)
+
+And quickly applied these changes so I could finalize the color palette with my end users. I also sent back the desktop design so I could finalize that design.
+
+## 05/05/2024
+
+I got the feedback on the color palette and it needed a bit of tweaking on the navbar, which I quickly fixed.
+
+![alt text](image-19.png)
+
+Here was my finalized mobile design after adjusting the shade of grey for contrast:
+
+![alt text](image-21.png)
