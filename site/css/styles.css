@@ -232,8 +232,18 @@ main {
     margin-right: 1rem;
 }
 
+/* COMMENTS ---------------------------------------- */
+
 #comments-div {
     margin-top: 1rem;
+}
+
+#comments-article {
+    display: flex;
+}
+
+#delete-comment-button {
+    margin-left: auto;
 }
 
 /* LAYOUT ---------------------------------------- */

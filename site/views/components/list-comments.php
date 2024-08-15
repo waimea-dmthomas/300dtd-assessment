@@ -18,8 +18,21 @@ foreach($comments as $comment) {
     $stmt2->execute();
     $user = $stmt2->fetch();
 
-    echo '<article>';   
-        echo '<b>' . $user['username'] . '</b>';
-        echo '<p>' . $comment['body'] . '</p>';
+    echo '<article id="comments-article">';   
+        echo '<div>';
+            echo '<b>' . $user['username'] . '</b>';
+            echo '<p>' . $comment['body'] . '</p>';
+        echo '</div>';
+
+        if($isAdmin):
+            ?> <button
+                id="delete-comment-button"
+                hx-delete="/delete-comment/<?= $comment['id'] ?>"
+                hx-confirm="Really delete this comment?"
+                class="danger"
+            >
+                ❌
+            </button> <?php
+        endif;
     echo '</article>';
 }

@@ -52,6 +52,7 @@ $router->route(GET,     PAGE,   '/topic/$id',               'pages/topic.php');
 $router->route(GET,     HTMX,   '/comments/$id',            'components/list-comments.php');
 $router->route(GET,     HTMX,   '/add-comment/$id',         'components/add-comment-form.php');
 $router->route(POST,    HTMX,   '/add-comment/$topic',      'actions/add-comment.php');
+$router->route(DELETE,  HTMX,   '/delete-comment/$id',        'actions/delete-comment.php');
 
 $router->route(GET,     PAGE,   '/users',                   'pages/users.php');
 $router->route(GET,     HTMX,   '/users',                   'components/list-users.php');
