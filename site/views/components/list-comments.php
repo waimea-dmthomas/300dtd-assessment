@@ -26,7 +26,7 @@ foreach($comments as $comment) {
 
         if($isAdmin):
             ?> <button
-                id="delete-comment-button"
+                id="delete-button"
                 hx-delete="/delete-comment/<?= $comment['id'] ?>"
                 hx-confirm="Really delete this comment?"
                 class="danger"

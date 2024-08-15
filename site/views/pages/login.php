@@ -16,5 +16,5 @@
 
     </form>
     <div id="message"></div>
-    <p>No account? <a href="/signup"><button>Sign Up</button></a></p>
+    <p>No account? <a id="signup-button" href="/signup"><button>Sign Up</button></a></p>
 </article>

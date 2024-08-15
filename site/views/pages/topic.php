@@ -56,6 +56,7 @@ foreach($topics as $topic) {
             </button>
 
             <button
+                id="delete-button"
                 hx-delete="/delete-topic/<?= $topic['id'] ?>"
                 hx-confirm="Really delete this topic?"
                 class="danger"
