@@ -9,7 +9,7 @@ require_once 'lib/globals.php';
 $db = connectToDB();
 
 // Get all topics
-$query = "SELECT * FROM topics WHERE category = '$id'";
+$query = "SELECT * FROM topics WHERE category = '$id' ORDER BY (pinned = '1') DESC, pinned";
 $stmt = $db->prepare($query);
 $stmt->execute();
 $topics = $stmt->fetchAll();
@@ -27,14 +27,17 @@ if($stmt->rowCount() > 0) {
             $user = $stmt2->fetch();
 
             echo '<a role="button" id="topic-article" href="/topic/' . $topic['id'] . '">';
-                echo '<h1>' . $topic['title'] . '</h1>';
-                if($topic['locked']) echo '<b>🔒</b>';
+                echo '<div id="topic-article-header">';
+                    echo '<h1>' . $topic['title'] . '</h1>';
+                    if($topic['pinned']) echo '<p>📌</p>';
+                    if($topic['locked']) echo '<p>🔒</p>';
+                echo '</div>';
 
-                echo '<article id="topic-body">';
+                echo '<article id="topic-article-body">';
                     echo '<p>' . $topic['body'] . '</p>';
                 echo '</article>';
 
-                echo '<div id="topic-op">';
+                echo '<div id="topic-article-op">';
                     echo '<p>Posted by ' . $user['username'] . '</p>';
                     // <a href="/profile/' . $user['id'] . '">' . $user['username'] . '</a>
                     if($user['admin']) echo '<img id="admin-icon" src="../images/admin.png" width="25px" title="Admin">';

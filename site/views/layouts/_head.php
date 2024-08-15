@@ -8,7 +8,7 @@
     <title><?= SITE_NAME ?></title>
 
     <!-- Load favicon -->
-    <link rel="icon" href="/images/favicon.svg">
+    <link rel="icon" href="/images/favicon.png">
 
     <!-- Load stylesheets -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.fluid.classless.min.css">

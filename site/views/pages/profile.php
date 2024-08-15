@@ -26,7 +26,7 @@ foreach($users as $user) {
     $query3 = "SELECT * FROM comments WHERE op = '$id'";
     $stmt3 = $db->prepare($query3);
     $stmt3->execute();
-    $topic = $stmt3->fetch();
+    $comment = $stmt3->fetch();
 
     echo '<article id="profile-article">';
         echo '<header id="profile-header">';

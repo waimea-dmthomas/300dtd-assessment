@@ -20,9 +20,9 @@ $categories = $stmt->fetchAll();
     >
         <h2>New Topic</h2>
 
-        <input name="title" type="text" placeholder="Title" required>
+        <input name="title" type="text" placeholder="Title" maxlength="64" required>
 
-        <input name="body" type="text" placeholder="Body" required></input>
+        <textarea name="body" type="text" rows="10" placeholder="Body" required></textarea>
 
         <input type="submit" value="Add">
 

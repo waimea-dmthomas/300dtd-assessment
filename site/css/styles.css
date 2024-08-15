@@ -27,10 +27,22 @@ p {
 
 #main-header {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid var(--border-color);
     margin-bottom: 2rem;
+    height: 4rem;
+
+    background-image: linear-gradient(to right, var(--pico-primary-background) 60%, rgba(0, 0, 0, 0)), url("../images/header.png");
+    background-position-y: -8.5rem;
+    background-position-x: right;
+    background-repeat: repeat-y;
+}
+
+#main-header img {
+    height: 3rem;
+    width: 3rem;
+    margin-right: 1rem;
+    border-radius: 10px;
 }
 
 #main-header > * {
@@ -41,7 +53,7 @@ p {
     font-size: 1.2rem;
     font-weight: bold;
     text-decoration: none;
-    color: inherit;
+    color: white;
 }
 
 
@@ -59,10 +71,11 @@ p {
 #main-nav {
     align-items: center;
     font-size: 1.1rem;
+
 }
 
 #main-nav menu {
-    margin: 0;
+    margin-top: 5.5%;
 }
 
 #main-nav a[aria-current="page"] {
@@ -127,10 +140,18 @@ main {
 
 /* USERS ---------------------------------------- */
 
+#list-users-icon {
+    padding-right: 0.2rem;
+}
+
 /* FORUMS ---------------------------------------- */
 
 #main-forums details {
     width: 10%;
+}
+
+#categories-list {
+    margin-bottom: 2rem;
 }
 
 /* CATEGORY ---------------------------------------- */
@@ -146,7 +167,7 @@ main {
 }
 
 #topic-article {
-    background-color: lightgrey;
+    background-color: var(--pico-primary-background);
     border: 0;
     color: black;
 }
@@ -156,25 +177,33 @@ main {
     transition: 0.1s;
 }
 
-#topic-body {
-    background-color: grey;
+#topic-article-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+#topic-article-header h1 {
+    margin-right: 0.2rem;
+    margin-bottom: 0;
+}
+
+#topic-article-body {
+    background-color: var(--pico-muted-border-color);
     border: 0;
     display: flex;
     flex-direction: column;
     gap: 0.2rem;
 }
 
-#topic-body p {
-    color: black
+#topic-article-body p {
+    color: white
 }
 
-#topic-op {
+#topic-article-op {
     display: flex;
     align-items: center;
-}
-
-#topic-op p {
-    color: black;
 }
 
 #add-topic-button {
@@ -182,6 +211,18 @@ main {
 }
 
 /* TOPIC ---------------------------------------- */
+
+#topic-header h1 {
+    margin: 0;
+}
+
+#topic-header a {
+    margin-bottom: 1rem;
+}
+
+#topic-op {
+    margin-bottom: 1rem;
+}
 
 #topic-admin-panel {
     display: flex;

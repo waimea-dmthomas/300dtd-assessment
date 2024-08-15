@@ -20,7 +20,7 @@ foreach($users as $user) {
 
     echo '<article>';
         ?>
-            <img src="data:image/<?php $user["iconType"]?>;base64,<?php echo base64_encode($user["iconFile"]); ?>"
+            <img id="list-users-icon" src="data:image/<?php $user["iconType"]?>;base64,<?php echo base64_encode($user["iconFile"]); ?>"
             height="50"
             width="50"
             alt="<?php $user["username"] . "'s Icon" ?>"

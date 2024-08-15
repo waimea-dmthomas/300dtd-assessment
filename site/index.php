@@ -35,43 +35,44 @@ $router = new Router(['debug' => true]);
 //-------------------------------------------------------------
 // Define routes
 
-$router->route(GET, PAGE, '/',      'pages/forum.php');
-$router->route(GET, HTMX, '/list-categories', 'components/list-categories.php');
-$router->route(GET, HTMX, '/add-category-form', 'components/add-category-form.php');
-$router->route(POST, HTMX, '/add-category', 'actions/add-category.php');
+$router->route(GET,     PAGE,   '/',                    'pages/forum.php');
+$router->route(GET,     HTMX,   '/forum',               'components/list-categories.php');
+$router->route(GET,     HTMX,   '/add-category',        'components/add-category-form.php');
+$router->route(POST,    HTMX,   '/add-category',        'actions/add-category.php');
 
-$router->route(GET, PAGE, '/category/$id',      'pages/category.php');
-$router->route(GET, HTMX, '/list-topics/$id', 'components/list-topics.php');
-$router->route(GET, HTMX, '/add-topic-form/$id',      'components/add-topic-form.php');
-$router->route(POST, HTMX, '/add-topic/$category', 'actions/add-topic.php');
-$router->route(PUT, HTMX, '/process-lock-topic/$id', 'actions/process-lock-topic.php');
-$router->route(DELETE, HTMX, '/delete-topic/$id', 'actions/delete-topic.php');
+$router->route(GET,     PAGE,   '/category/$id',        'pages/category.php');
+$router->route(GET,     HTMX,   '/category/$id',        'components/list-topics.php');
+$router->route(GET,     HTMX,   '/add-topic/$id',       'components/add-topic-form.php');
+$router->route(POST,    HTMX,   '/add-topic/$category', 'actions/add-topic.php');
+$router->route(PUT,     HTMX,   '/lock-topic/$id',      'actions/process-lock-topic.php');
+$router->route(PUT,     HTMX,   '/pin-topic/$id',       'actions/process-pin-topic.php');
+$router->route(DELETE,  HTMX,   '/delete-topic/$id',    'actions/delete-topic.php');
 
-$router->route(GET, PAGE, '/topic/$id',      'pages/topic.php');
-$router->route(GET, HTMX, '/list-comments/$id',      'components/list-comments.php');
-$router->route(GET, HTMX, '/add-comment-form/$id',      'components/add-comment-form.php');
-$router->route(POST, HTMX, '/add-comment/$topic',      'actions/add-comment.php');
+$router->route(GET,     PAGE,   '/topic/$id',           'pages/topic.php');
+$router->route(GET,     HTMX,   '/comments/$id',        'components/list-comments.php');
+$router->route(GET,     HTMX,   '/add-comment/$id',     'components/add-comment-form.php');
+$router->route(POST,    HTMX,   '/add-comment/$topic',  'actions/add-comment.php');
 
-$router->route(GET, PAGE, '/users',      'pages/users.php');
-$router->route(GET, HTMX, '/list-users', 'components/list-users.php');
+$router->route(GET,     PAGE,   '/users',      'pages/users.php');
+$router->route(GET,     HTMX,   '/list-users', 'components/list-users.php');
 
-$router->route(GET, PAGE, '/profile/$id',      'pages/profile.php');
-$router->route(GET, HTMX, '/edit-profile/$id',      'components/edit-profile.php');
-$router->route(PUT, HTMX, '/process-edit-profile/$id', 'actions/process-edit-profile.php');
+$router->route(GET,     PAGE,   '/profile/$id',      'pages/profile.php');
+$router->route(GET,     HTMX,   '/edit-profile/$id',      'components/edit-profile.php');
+$router->route(PUT,     HTMX,   '/process-edit-profile/$id', 'actions/process-edit-profile.php');
 
-$router->route(GET, PAGE, '/login', 'pages/login.php');
-$router->route(POST, HTMX, '/login-user', 'actions/login-user.php');
-$router->route(GET, HTMX, '/login-complete',      'components/login-complete.php');
-$router->route(POST, HTMX, '/logout-user',    'actions/logout-user.php');
+$router->route(GET,     PAGE,   '/login', 'pages/login.php');
+$router->route(POST,    HTMX,   '/login-user', 'actions/login-user.php');
+$router->route(GET,     HTMX,   '/login-complete',      'components/login-complete.php');
+$router->route(POST,    HTMX,   '/logout-user',    'actions/logout-user.php');
 
-$router->route(GET, PAGE, '/signup', 'pages/signup.php');
-$router->route(POST, HTMX, '/signup-user', 'actions/signup-user.php');  
+$router->route(GET,     PAGE,   '/signup', 'pages/signup.php');
+$router->route(POST,    HTMX,   '/signup-user', 'actions/signup-user.php');  
 
-$router->route(GET, PAGE, '/admin', 'pages/admin.php');
-$router->route(GET, HTMX, '/admin-panel', 'components/admin-panel.php');
-$router->route(DELETE, HTMX, '/delete-user/$id', 'actions/delete-user.php');
-$router->route(PUT, HTMX, '/process-admin/$id', 'actions/process-admin.php');
-$router->route(PUT, HTMX, '/process-moderator/$id', 'actions/process-moderator.php');   
+$router->route(GET,     PAGE,   '/admin', 'pages/admin.php');
+$router->route(GET,     HTMX,   '/admin-panel', 'components/admin-panel.php');
+$router->route(DELETE,  HTMX,   '/delete-user/$id', 'actions/delete-user.php');
+$router->route(PUT,     HTMX,   '/process-admin/$id', 'actions/process-admin.php');
+$router->route(PUT,     HTMX,   '/process-moderator/$id', 'actions/process-moderator.php');   
 
 
 //-------------------------------------------------------------
