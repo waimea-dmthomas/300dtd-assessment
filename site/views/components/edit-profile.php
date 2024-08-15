@@ -14,7 +14,7 @@ $user = $stmt->fetch();
 
 ?>
     <form
-        hx-put="/process-edit-profile/<?=$id?>"
+        hx-put="/edit-profile/<?=$id?>"
         hx-trigger="submit"
         enctype="multipart/form-data"
     >   

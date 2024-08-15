@@ -18,7 +18,7 @@
         <?php endif ?>
 
         <?php if ($isLoggedIn): ?>
-            <li><a role="button" hx-post="/logout-user" href="/logout">Logout</a>
+            <li><a role="button" hx-post="/logout" href="/logout">Logout</a>
         <?php else: ?>
             <li><a role="button" href="/login">Log In</a>
             <li><a role="button" href="/signup">Sign Up</a>

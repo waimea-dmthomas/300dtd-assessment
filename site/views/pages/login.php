@@ -4,7 +4,7 @@
     <form
         hx-swap="innerHTML"
         hx-target="#message"
-        hx-post="/login-user" 
+        hx-post="/login" 
         hx-trigger="submit"
     >
 

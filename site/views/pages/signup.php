@@ -2,7 +2,7 @@
     <form
         hx-swap="innerHTML"
         hx-target="#message"
-        hx-post="/signup-user"
+        hx-post="/signup"
         hx-trigger="submit"
         enctype="multipart/form-data"
     >
