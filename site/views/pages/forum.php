@@ -1,21 +1,28 @@
-<?php require_once 'lib/globals.php'; ?>
+<!-- List categories -->
 
-<?php if ($isLoggedIn): ?>
-    <h1>Hello, <i><?=$userName?></i></h1>
-<?php else: ?>
-    <h1>Forums</h1>
-<?php endif ?>
+<?php
+    // Welcome message
+    require_once 'lib/globals.php'; 
 
-<section 
-    id="categories-list"
-    hx-get="/forum"
-    hx-trigger="load"
->
-</section>
+    if ($isLoggedIn) {
+        echo '<h1>Hello, <i>' . $userName . '</i></h1>';
+    }
+    else {
+        echo '<h1>Forums</h1>';
+    }
 
-<?php if ($isAdmin): ?>
-    <details id="main-forums">
-        <summary role="button" >Add Category</summary>
-        <section hx-get="/add-category" hx-trigger="load"></section>
-    </details>
-<?php endif ?>
+    // Load category list
+    echo '<section 
+        id="categories-list"
+        hx-get="/forum"
+        hx-trigger="load">';
+    echo '</section>';
+
+    // Admin add category form
+    if ($isAdmin) {
+        echo '<details id="main-forums">';
+            echo '<summary role="button" >Add Category</summary>';
+            echo '<section hx-get="/add-category" hx-trigger="load"></section>';
+        echo '</details>';
+    }
+?>

@@ -43,12 +43,36 @@ a[role="button"]:hover, button:hover, input[type="submit"]:hover, summary[role="
     background-color: var(--primary-hover);
 }
 
-#delete-button {
+.delete-button {
     background-color: rgb(161, 57, 57);
 }
 
-#delete-button:hover {
+.delete-button:hover {
     background-color: rgb(121, 44, 44);
+}
+
+.confirm-button[type="submit"] {
+    background-color: rgb(129, 179, 97);
+}
+
+.confirm-button:hover[type="submit"] {
+    background-color: rgb(101, 134, 81);
+}
+
+.check-validity:user-invalid {
+    --pico-border-color: var(--pico-form-element-invalid-border-color);
+    background-image: var(--pico-icon-invalid);
+    background-position: 98.5%;
+    background-repeat: no-repeat;
+    background-size: 1rem;
+}
+
+.check-validity:user-valid {
+    --pico-border-color: var(--pico-form-element-valid-border-color);
+    background-image: var(--pico-icon-valid);
+    background-position: 98.5%;
+    background-repeat: no-repeat;
+    background-size: 1rem;
 }
 
 #back-button {

@@ -8,7 +8,7 @@ require_once 'lib/db.php';
 $title = $_POST['title'];
 $description = $_POST['description'];
 
-// Connect
+// Connect to DB
 $db = connectToDB();
 
 // Try to find a category with the given title
@@ -24,6 +24,8 @@ if (!$categoryData) {
 
     $stmt = $db->prepare($query);
     $stmt->execute([$title, $description]);
+
+    // Redirect to forums
     header('HX-Redirect: ' . SITE_BASE);
 }
 else {

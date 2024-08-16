@@ -9,7 +9,7 @@ require_once 'lib/globals.php';
 $body = $_POST['body'];
 $op = $userId;
 
-// Connect
+// Connect to DB
 $db = connectToDB();
 
 // Add the category
@@ -18,4 +18,6 @@ VALUES (?, ?, ?)';
 
 $stmt = $db->prepare($query);
 $stmt->execute([$body, $op, $topic]);
+
+// Redirect to topic
 header('HX-Redirect: ' . $topic);

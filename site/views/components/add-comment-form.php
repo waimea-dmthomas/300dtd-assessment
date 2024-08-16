@@ -1,3 +1,5 @@
+<!-- Add comment form -->
+
 <article>
     <form
         hx-post="/add-comment/<?=$id?>"

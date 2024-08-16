@@ -16,6 +16,7 @@ $categories = $stmt->fetchAll();
 
 consoleLog($categories, 'DB Data');
 
+// Loop through categories
 foreach($categories as $category) {
     echo '<a href="/category/' . $category['id'] . '" role="button">' . $category['title'] . '</a>';
     echo '<p>' . $category['description'] . '</p>';

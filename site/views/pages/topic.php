@@ -5,14 +5,19 @@
 require_once 'lib/db.php';
 require_once 'lib/globals.php';
 
+// Connect to DB
 $db = connectToDB();
 
+// Get topics from category
 $query = 'SELECT * FROM topics WHERE id = ?';
 $stmt = $db->prepare($query);
 $stmt->execute([$id]);
 $topics = $stmt->fetchAll();
 
+// Loop through topics
 foreach($topics as $topic) {
+
+    // Get topic op
     $op = $topic['op'];
 
     $query2 = "SELECT * FROM users WHERE id = '$op'";
@@ -20,12 +25,14 @@ foreach($topics as $topic) {
     $stmt2->execute();
     $user = $stmt2->fetch();
 
+    // Topic header and body
     echo '<article id="topic-header">';
         echo '<h1>' . $topic['title'] . '</h1>';
         echo '<p id="topic-op">Posted by ' . '<a href="/profile/' . $user['id'] . '">' . $user['username'] . '</a>' . '</p>';
         echo '<p>' . $topic['body'] . '</p>';   
     echo '</article>';
 
+    // Topic admin panel
     if($isAdmin):
         echo '<article id="topic-admin-panel">';
         ?>
@@ -56,10 +63,9 @@ foreach($topics as $topic) {
             </button>
 
             <button
-                id="delete-button"
+                class="delete-button"
                 hx-delete="/delete-topic/<?= $topic['id'] ?>"
                 hx-confirm="Really delete this topic?"
-                class="danger"
             >
                 <?php
                     echo 'Delete Topic'
@@ -69,6 +75,7 @@ foreach($topics as $topic) {
         echo '</article>';
     endif;
 
+    // Load comments
     echo '<article>';
         echo '<h1>Comments</h1>';
 

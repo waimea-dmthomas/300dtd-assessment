@@ -14,6 +14,7 @@ $stmt = $db->prepare($query);
 $stmt->execute([$id]);
 $users = $stmt->fetchAll();
 
+// Loop through users
 foreach($users as $user) {
 
     // Get amount of topics
@@ -28,11 +29,12 @@ foreach($users as $user) {
     $stmt3->execute();
     $comment = $stmt3->fetch();
 
+    // Echo profile
     echo '<article id="profile-article">';
-        echo '<header id="profile-header">';
 
+        // Profile header
+        echo '<header id="profile-header">';
             echo '<div id="profile-header-info">';
-                
                 echo '<div id="profile-header-name">';
                     echo ' ' . $user['username'] . "'s Profile" . ' ';
                     if($user['admin']) echo '<img id="admin-icon" src="../images/admin.png" width="25px" title="Admin">';
@@ -47,6 +49,7 @@ foreach($users as $user) {
             }
         echo '</header>';
         
+        // Profile body
         echo '<div id="profile-body">';
             ?>
                 <img src="data:image/<?php $user["iconType"]?>;base64,<?php echo base64_encode($user["iconFile"]); ?>"
@@ -62,6 +65,7 @@ foreach($users as $user) {
             echo '</div>';
 
         echo '</div>';
+
     echo '</article>';
 }
 

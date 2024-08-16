@@ -1,3 +1,5 @@
+<!-- Login form -->
+
 <article>
     <h2>Login</h2>
 
@@ -8,9 +10,9 @@
         hx-trigger="submit"
     >
 
-        <input name="username" type="text" placeholder="Username" required>
+        <input name="username" type="text" placeholder="Username" maxlength="16" required>
 
-        <input name="password" type="password" placeholder="Password" required>
+        <input name="password" type="password" placeholder="Password" maxlength="64" required>
 
         <input type="submit" value="Login">
 

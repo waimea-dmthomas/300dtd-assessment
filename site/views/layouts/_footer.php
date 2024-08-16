@@ -1,4 +1,4 @@
-<!-- Footer could conatin contact info, links, etc. -->
+<!-- Footer section content -->
 
 <footer id="main-footer">
 

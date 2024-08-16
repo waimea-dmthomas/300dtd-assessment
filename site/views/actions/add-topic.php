@@ -10,7 +10,7 @@ $title = $_POST['title'];
 $body = $_POST['body'];
 $op = $userId;
 
-// Connect
+// Connect to DB
 $db = connectToDB();
 
 // Add new topic
@@ -20,4 +20,5 @@ VALUES (?, ?, ?, ?)';
 $stmt = $db->prepare($query);
 $stmt->execute([$title, $body, $op, $category]);
 
+// Redirect to category
 header('HX-Redirect: ' . $category);

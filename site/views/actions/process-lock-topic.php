@@ -12,5 +12,6 @@ $query = 'UPDATE topics SET locked = NOT locked WHERE id = ?';
 $stmt = $db->prepare($query);
 $stmt->execute([$id]);
 
+// Redirect to topic
 header("HX-Redirect: " . $id . " ");
 

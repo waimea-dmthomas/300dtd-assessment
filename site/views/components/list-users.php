@@ -16,9 +16,13 @@ $users = $stmt->fetchAll();
 
 consoleLog($users, 'DB Data');
 
+// Loop through users
 foreach($users as $user) {
 
+    // User card
     echo '<article>';
+
+        // Load icon
         ?>
             <img id="list-users-icon" src="data:image/<?php $user["iconType"]?>;base64,<?php echo base64_encode($user["iconFile"]); ?>"
             height="50"
@@ -26,6 +30,7 @@ foreach($users as $user) {
             alt="<?php $user["username"] . "'s Icon" ?>"
         ><?php
 
+        // Load username
         echo ' ' . '<a href="/profile/' . $user['id'] . '">' . $user['username'] . '</a>' . ' ';
         if($user['admin']) echo '<img src="images/admin.png" width="25px" title="Admin">';
         if($user['moderator']) echo '<img src="images/moderator.png" width="25px" title="Moderator">';

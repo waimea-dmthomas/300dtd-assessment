@@ -4,12 +4,14 @@
 
 require_once 'lib/db.php';
 
+// Connect to DB
 $db = connectToDB();
 
+// Get data from form
 $pass = $_POST['password'];
 $user = $_POST['username'];
 
-// Try to find a user account with the given username
+// Get user account with given username
 $query = 'SELECT * FROM users WHERE username = ?';
 $stmt = $db->prepare($query);
 $stmt->execute([$user]);
@@ -20,13 +22,16 @@ $userData = $stmt->fetch();
 if ($userData) {
     // Verify password and hash
     if (password_verify($pass, $userData['hash'])) {
+
         // We got here, so user and password both ok
         $_SESSION['user']['loggedIn'] = true;
+
         // Save user info for later use
         $_SESSION['user']['admin'] = $userData['admin'];
         $_SESSION['user']['username'] = $userData['username'];
         $_SESSION['user']['id'] = $userData['id'];
-        // Head to home page
+
+        // Redirect to forum
         header('HX-Redirect: ' . SITE_BASE);
     }
     else {

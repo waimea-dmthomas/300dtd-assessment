@@ -1,3 +1,5 @@
+<!-- Signup form -->
+
 <article id="login-form">
     <form
         hx-swap="innerHTML"
@@ -8,14 +10,9 @@
     >
         <h2>Sign Up</h2>
 
-        <label>Username</label>
-        <input name="user" type="text" required>
+        <input class="check-validity" name="user" type="text" minlength="4" maxlength="16" placeholder="Username" required>
 
-        <label>Password</label>
-        <input name="pass" type="password" required></input>
-
-        <label>Icon</label>
-        <input name="icon" type="file" accept="image/*" required></input>
+        <input class="check-validity" name="pass" type="password" minlength="8" maxlength="64" placeholder="Password" required></input>
 
         <input type="submit" value="Sign Up">
 

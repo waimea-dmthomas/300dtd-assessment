@@ -18,8 +18,10 @@ $users = $stmt->fetchAll();
 
 consoleLog($users, 'DB Data');
 
+// Echo admin panel
 echo '<table id="main-users">';
 
+    // Table header
     echo '<tr>';
         echo '<th>Username</th>';
         echo '<th>Admin</th>';
@@ -27,15 +29,18 @@ echo '<table id="main-users">';
         echo '<th>Delete?</th>';
     echo '</tr>';
 
+    // Loop through users
     foreach($users as $user) {
         echo '<tr>';
 
+            // Usernames
             echo '<td>';
                 echo $user['username'];
                 if($user['admin']) echo ' <img src="images/admin.png" width="25px" title="Admin">';
                 if($user['moderator']) echo ' <img src="images/moderator.png" width="25px" title="Moderator">';
             echo '</td>';
 
+            // Admin permissions
             echo '<td>';
                 ?>
                     <p>
@@ -56,7 +61,8 @@ echo '<table id="main-users">';
                     </p>
                 <?php
             echo '</td>';
-
+            
+            // Moderator permissions
             echo '<td>';
                 ?>
                     <p>
@@ -78,17 +84,16 @@ echo '<table id="main-users">';
                 <?php
             echo '</td>';
 
+            // Delete user
             echo '<td>';
                 ?>
                     <p>
                         <button
-                            id="delete-button"
+                            class="delete-button"
                             hx-delete="/delete-user/<?= $user['id'] ?>"
                             hx-confirm="Really delete this user?"
-                            class="danger"
                         >
                             Delete User
-                        
                         </button>
                     </p>
                 <?php

@@ -12,5 +12,6 @@ $query = 'UPDATE users SET moderator = NOT moderator WHERE id = ?';
 $stmt = $db->prepare($query);
 $stmt->execute([$id]);
 
+// Redirect to admin panel
 header('HX-Redirect: admin');
 

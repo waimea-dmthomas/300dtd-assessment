@@ -1,3 +1,5 @@
+<!-- Completed login message -->
+
 <?php
 
 echo '<h2>Account Created!</h2>';

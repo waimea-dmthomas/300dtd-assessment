@@ -12,5 +12,6 @@ $query = 'UPDATE topics SET pinned = NOT pinned WHERE id = ?';
 $stmt = $db->prepare($query);
 $stmt->execute([$id]);
 
+// Redirect to admin panel
 header("HX-Redirect: " . $id . " ");
 

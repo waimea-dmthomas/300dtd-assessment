@@ -1,10 +1,14 @@
+<!-- Add topic form -->
+
 <?php
 
 require_once 'lib/db.php';
 require_once 'lib/globals.php';
 
+// Connect to DB
 $db = connectToDB();
 
+// Get category from URL
 $query = 'SELECT * FROM categories WHERE id = ?';
 $stmt = $db->prepare($query);
 $stmt->execute([$id]);
