@@ -8,7 +8,7 @@
 
         <input name="title" type="text" placeholder="Title" required>
 
-        <input name="description" type="text" placeholder="Description" required></input>
+        <textarea name="description" type="text" placeholder="Description" required></textarea>
 
         <input type="submit" value="Add">
 

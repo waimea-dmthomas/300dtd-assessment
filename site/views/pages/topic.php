@@ -34,10 +34,10 @@ foreach($topics as $topic) {
             >
                 <?php
                     if ($topic['locked']) {
-                        echo 'Unlock Topic';
+                        echo '🔒 Unlock Topic';
                     }
                     else {
-                        echo 'Lock Topic';
+                        echo '🔓 Lock Topic';
                     }
                 ?>
             </button>
@@ -47,10 +47,10 @@ foreach($topics as $topic) {
             >
                 <?php
                     if ($topic['pinned']) {
-                        echo 'Unpin Topic';
+                        echo '📌 Unpin Topic';
                     }
                     else {
-                        echo 'Pin Topic';
+                        echo '📌 Pin Topic';
                     }
                 ?>
             </button>

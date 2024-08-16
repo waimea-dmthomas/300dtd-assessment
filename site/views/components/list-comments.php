@@ -31,7 +31,7 @@ foreach($comments as $comment) {
                 hx-confirm="Really delete this comment?"
                 class="danger"
             >
-                ❌
+                <p>&nbsp;❌&nbsp;</p>
             </button> <?php
         endif;
     echo '</article>';

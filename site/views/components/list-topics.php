@@ -40,7 +40,7 @@ if($stmt->rowCount() > 0) {
                 echo '<div id="topic-article-op">';
                     echo '<p>Posted by ' . $user['username'] . '</p>';
                     // <a href="/profile/' . $user['id'] . '">' . $user['username'] . '</a>
-                    if($user['admin']) echo '<img id="admin-icon" src="../images/admin.png" width="25px" title="Admin">';
+                    if($user['admin']) echo '<img id="admin-icon" src="../images/admin.png" width="25px" height="25px" title="Admin">';
                 echo '</div>';
             echo '</a>';
         }

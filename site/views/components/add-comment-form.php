@@ -4,7 +4,7 @@
         hx-trigger="submit"
         enctype="multipart/form-data"
     >
-        <input name="body" type="text" placeholder="Leave a comment..." required></input>
+        <textarea name="body" type="text" placeholder="Leave a comment..." required></textarea>
 
         <input type="submit" value="Add">
 
