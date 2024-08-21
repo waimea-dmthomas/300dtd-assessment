@@ -11,7 +11,7 @@ if (!$isAdmin) header('HX-Redirect: ' . SITE_BASE . '/');
 $db = connectToDB();
 
 // Get all users
-$query = 'SELECT * FROM users ';
+$query = 'SELECT * FROM users';
 $stmt = $db->prepare($query);
 $stmt->execute();
 $users = $stmt->fetchAll();
@@ -26,7 +26,7 @@ echo '<table id="main-users">';
         echo '<th>Username</th>';
         echo '<th>Admin</th>';
         echo '<th>Moderator</th>';
-        echo '<th>Delete?</th>';
+        echo '<th>Ban?</th>';
     echo '</tr>';
 
     // Loop through users
@@ -38,6 +38,7 @@ echo '<table id="main-users">';
                 echo $user['username'];
                 if($user['admin']) echo ' <img src="images/admin.png" width="25px" title="Admin">';
                 if($user['moderator']) echo ' <img src="images/moderator.png" width="25px" title="Moderator">';
+                if($user['banned']) echo '🚫';
             echo '</td>';
 
             // Admin permissions
@@ -90,10 +91,17 @@ echo '<table id="main-users">';
                     <p>
                         <button
                             class="delete-button"
-                            hx-delete="/delete-user/<?= $user['id'] ?>"
-                            hx-confirm="Really delete this user?"
+                            hx-delete="/process-ban-user/<?= $user['id'] ?>"
+                            hx-confirm="Really ban this user?"
                         >
-                            Delete User
+                            <?php
+                                if ($user['banned']) {
+                                    echo 'Unban User';
+                                }
+                                else {
+                                    echo 'Ban User';
+                                }
+                            ?>
                         </button>
                     </p>
                 <?php

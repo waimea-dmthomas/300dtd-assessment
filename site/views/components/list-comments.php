@@ -30,8 +30,10 @@ foreach($comments as $comment) {
     
         // Comment op
         echo '<div>';
-            echo '<b>' . $user['username'] . '</b>';
+            if($user['banned']) echo '<b>Banned User ' . $user['id'] . '🚫</b>';
+            else echo '<b id="topic-op">' . '<a href="/profile/' . $user['id'] . '">' . $user['username'] . '</a>' . '</b>';
             echo '<p>' . $comment['body'] . '</p>';
+            echo '<i>' . time_elapsed_string($comment['timestamp']) . '</i>';
         echo '</div>';
 
         // Admin delete button

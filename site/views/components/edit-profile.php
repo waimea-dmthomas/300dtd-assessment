@@ -17,7 +17,7 @@ $user = $stmt->fetch();
 // Edit profile form
 ?>
 <form
-    hx-put="/edit-profile/<?=$id?>"
+    hx-post="/process-edit-profile/<?=$id?>"
     hx-trigger="submit"
     enctype="multipart/form-data"
 >   
@@ -42,5 +42,6 @@ $user = $stmt->fetch();
         
         <label>Profile Picture</label>
         <input name="icon" type="file" accept="image/*"></input>
+        <!-- <input name="status" type="text"></input> -->
     </article>
 </form>

@@ -9,7 +9,7 @@ require_once 'lib/globals.php';
 $db = connectToDB();
 
 // Get all topics
-$query = "SELECT * FROM topics WHERE category = '$id' ORDER BY (pinned = '1') DESC, pinned";
+$query = "SELECT * FROM topics WHERE category = '$id' ORDER BY (pinned = '1') DESC, pinned, timestamp DESC";
 $stmt = $db->prepare($query);
 $stmt->execute();
 $topics = $stmt->fetchAll();
@@ -45,10 +45,17 @@ if($stmt->rowCount() > 0) {
 
                 // Topic op
                 echo '<div id="topic-article-op">';
-                    echo '<p>Posted by ' . $user['username'] . '</p>';
+                    if($user['banned']) echo '<p>Posted by Banned User ' . $user['id'] . '🚫</p>';
+                    else echo '<p>Posted by ' . $user['username'] . '</p>';
                     // <a href="/profile/' . $user['id'] . '">' . $user['username'] . '</a>
                     if($user['admin']) echo '<img id="admin-icon" src="../images/admin.png" width="25px" height="25px" title="Admin">';
                 echo '</div>';
+
+                // Topic timestamp
+                echo '<div id="topic-timestamp">';
+                    echo '<p>' . time_elapsed_string($topic['timestamp']) . '</p>';
+                echo '</div>';
+            
             echo '</a>';
         }
     echo '</section>';

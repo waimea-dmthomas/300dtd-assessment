@@ -14,4 +14,3 @@ $stmt->execute([$id]);
 
 // Redirect to topic
 header("HX-Redirect: " . $id . " ");
-

@@ -28,7 +28,8 @@ foreach($topics as $topic) {
     // Topic header and body
     echo '<article id="topic-header">';
         echo '<h1>' . $topic['title'] . '</h1>';
-        echo '<p id="topic-op">Posted by ' . '<a href="/profile/' . $user['id'] . '">' . $user['username'] . '</a>' . '</p>';
+        if($user['banned']) echo '<p>Posted by Banned User ' . $user['id'] . '🚫</p>';
+        else echo '<p id="topic-op">Posted by ' . '<a href="/profile/' . $user['id'] . '">' . $user['username'] . '</a>' . '</p>';
         echo '<p>' . $topic['body'] . '</p>';   
     echo '</article>';
 

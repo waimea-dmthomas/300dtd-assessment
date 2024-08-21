@@ -18,6 +18,11 @@ $topic = $stmt->fetch();
 
 $category = $topic['category'];
 
+// Delete comments
+$query = 'DELETE FROM comments WHERE topic = ?';
+$stmt = $db->prepare($query);
+$stmt->execute([$id]);
+
 // Delete topic
 $query = 'DELETE FROM topics WHERE id = ?';
 $stmt = $db->prepare($query);

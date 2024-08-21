@@ -9,7 +9,7 @@ require_once 'lib/globals.php';
 $db = connectToDB();
 
 // Get all users
-$query = 'SELECT id, username, `admin`, moderator, iconFile, iconType FROM users ';
+$query = 'SELECT id, username, `admin`, moderator, iconFile, iconType FROM users WHERE banned = 0 ORDER BY joined DESC';
 $stmt = $db->prepare($query);
 $stmt->execute();
 $users = $stmt->fetchAll();

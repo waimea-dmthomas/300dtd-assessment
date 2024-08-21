@@ -52,14 +52,14 @@ $router->route(GET,     PAGE,   '/topic/$id',               'pages/topic.php');
 $router->route(GET,     HTMX,   '/comments/$id',            'components/list-comments.php');
 $router->route(GET,     HTMX,   '/add-comment/$id',         'components/add-comment-form.php');
 $router->route(POST,    HTMX,   '/add-comment/$topic',      'actions/add-comment.php');
-$router->route(DELETE,  HTMX,   '/delete-comment/$id',        'actions/delete-comment.php');
+$router->route(DELETE,  HTMX,   '/delete-comment/$id',      'actions/delete-comment.php');
 
 $router->route(GET,     PAGE,   '/users',                   'pages/users.php');
 $router->route(GET,     HTMX,   '/users',                   'components/list-users.php');
 
 $router->route(GET,     PAGE,   '/profile/$id',             'pages/profile.php');
 $router->route(GET,     HTMX,   '/edit-profile/$id',        'components/edit-profile.php');
-$router->route(PUT,     HTMX,   '/edit-profile/$id',        'actions/process-edit-profile.php');
+$router->route(POST,     HTMX,   '/process-edit-profile/$id','actions/process-edit-profile.php');
 
 $router->route(GET,     PAGE,   '/login',                   'pages/login.php');
 $router->route(POST,    HTMX,   '/login',                   'actions/login-user.php');
@@ -71,7 +71,7 @@ $router->route(POST,    HTMX,   '/signup',                  'actions/signup-user
 
 $router->route(GET,     PAGE,   '/admin',                   'pages/admin.php');
 $router->route(GET,     HTMX,   '/admin',                   'components/admin-panel.php');
-$router->route(DELETE,  HTMX,   '/delete-user/$id',         'actions/delete-user.php');
+$router->route(DELETE,  HTMX,   '/process-ban-user/$id',    'actions/process-ban-user.php');
 $router->route(PUT,     HTMX,   '/process-admin/$id',       'actions/process-admin.php');
 $router->route(PUT,     HTMX,   '/process-moderator/$id',   'actions/process-moderator.php');   
 

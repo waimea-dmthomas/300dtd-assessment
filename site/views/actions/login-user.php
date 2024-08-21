@@ -19,25 +19,33 @@ $userData = $stmt->fetch();
 
 // Did we actually get a user account?
 
+
+
 if ($userData) {
-    // Verify password and hash
-    if (password_verify($pass, $userData['hash'])) {
-
-        // We got here, so user and password both ok
-        $_SESSION['user']['loggedIn'] = true;
-
-        // Save user info for later use
-        $_SESSION['user']['admin'] = $userData['admin'];
-        $_SESSION['user']['username'] = $userData['username'];
-        $_SESSION['user']['id'] = $userData['id'];
-
-        // Redirect to forum
-        header('HX-Redirect: ' . SITE_BASE);
+    // Check is user is banned
+    if ($userData['banned']) {
+        echo '<b>User has been banned!</b>';
     }
     else {
-        echo '<p>Incorrect password!</p>';
+        // Verify password and hash
+        if (password_verify($pass, $userData['hash'])) {
+
+            // We got here, so user and password both ok
+            $_SESSION['user']['loggedIn'] = true;
+
+            // Save user info for later use
+            $_SESSION['user']['admin'] = $userData['admin'];
+            $_SESSION['user']['username'] = $userData['username'];
+            $_SESSION['user']['id'] = $userData['id'];
+
+            // Redirect to forum
+            header('HX-Redirect: ' . SITE_BASE);
+        }
+        else {
+            echo '<b>Incorrect password!</b>';
+        }
     }
 }
 else {
-    echo "<p>This account doesn't exist!</p>";
+    echo "<b>This account doesn't exist!</b>";
 }

@@ -266,6 +266,11 @@ main {
     color: white
 }
 
+#topic-timestamp {
+    display: flex;
+    align-items: left;
+}
+
 #topic-article-op {
     display: flex;
     align-items: center;

@@ -4,6 +4,9 @@
 
 require_once 'lib/db.php';
 
+// Connect
+$db = connectToDB();
+
 // Check for upload error
 $error = $_FILES['icon']['error'];
 if ($error) die('Error uploading picture');
@@ -29,6 +32,15 @@ if( $iconType != 'image/svg+xml' &&
 $iconData = file_get_contents($iconFile);
 
 // Update the user data
-$query = 'UPDATE users SET iconFile = iconFile, iconType = iconType WHERE id = ?';
+$query = "UPDATE users SET iconFile = '$iconData' WHERE id = '$id'";
 $stmt = $db->prepare($query);
-$stmt->execute([$id]);
+$stmt->execute();
+
+// $status = $_POST['status'];
+
+// $query = "UPDATE users SET status = '$status' WHERE id = ?";
+// $stmt = $db->prepare($query);
+// $stmt->execute([$id]);
+
+// Redirect to topic
+// header("HX-Redirect: profile/' . $id . '");
