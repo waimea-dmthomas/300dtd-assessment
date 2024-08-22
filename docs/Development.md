@@ -19,19 +19,42 @@ Assessment Standards: **91902** and **91903**
 
 I began working on planning the potential database using DrawSQL. This will be used as a framework for what the actual database may function like and look like in MySQL clearly and concisely. I gave "forum topics" (sections i.e. general, off-topic) their own database instead of being a column under threads because this means admins could add new topics to the site through an admin menu, instead of having to hardcode it in the sites HTML/CSS.
 
+The key functionality of the database would need to enable users to:
+- Create new threads on the site when logged in
+- Create comments to reply to those threads
+- Create new accounts and log in/log out
+- Allow admins to create new categories
+
+
 ## 17/05/24
 
 ![Excalidraw flowchart](images/flowchart.png)
 
 ### **Excalidraw flowchart prototype**
 
-I started working on a flowchart in Excalidraw which illustrates how the website will flow and function on a base level. The yellow circles represent where the user starts, blue squares are pages, purple diamonds are header buttons and red/green boxes are functional buttons.
+I started working on a flowchart in Excalidraw which illustrates how the website will flow and function on a base level.
+The key functionalities I needed on the site were:
+- A login/logout page
+- A page for listing topics
+- A page for listing threads
+- Comment form
+- Admin panel
+- Profile page
+
+Different shapes/colors represent different functions:
+- The yellow circles represent where the user starts
+- Blue squares are pages
+- Purple diamonds are header buttons
+- Red/green boxes are functional buttons.
+
+I also responded to some end user feedback:
+
+![Updated database](images/mysql-2.png)
 
 > A user suggested that the database be updated to include the admin permissions under "users"
 
-The DrawSQL "users" database now includes an admin column which is a boolean.
+The DrawSQL "users" database now includes an admin column which is a boolean.This now allows admins to toggle if users are admins/moderators
 
-![Updated database](images/mysql-2.png)
 
 ## 24/05/2024
 
@@ -75,7 +98,7 @@ I then got some feedback for the desktop design and required a few little tweaks
 
 > ![alt text](image-14.png)
 
-I also began to work on a color palette for the site:
+I also began to work on a color palette for the site using RealtimeColors integrated into Figma:
 
 ![alt text](image-8.png)
 
