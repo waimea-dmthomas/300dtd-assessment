@@ -217,6 +217,16 @@ I fixed this by moving the ```if else``` statement outside of the button and ins
 
 ![alt text](images/confirm-message-code-2.png)
 
+### Line breaks
+Another issue which I found while testing the website was that line breaks were not preserved when posting a new topic. However, the database would still have the line breaks stored intact.
+
+![alt text](images/linebreak-1.png)
+![alt text](images/linebreak-2.png)
+
+To fix this, I had to add the ```white-space``` property equal to ```pre-wrap;```. This meant that the text wrap was held intact when the text was rendered on the site.
+
+![alt text](images/linebreak-3.png)
+
 ## System Testing
 
 ### Database Testing

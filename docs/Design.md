@@ -67,10 +67,9 @@ When programming the website, careful consideration and rigorous testing should 
 
 ### Usability Implications
 
+The usability implication of a website relate to the ease of use of the website without guidance or tutorial.
 
-
-
-
+When designing the website, I should follow standard conventions for placement of buttons, menus etc. so that users are already familiar with how to navigate. There should always be a "way out" of pages either through the browser back button or a button on the site. It should always be obvious to the user what page they are on and what exactly they are doing on the site. Things should always be clear and familiar to the user and it should function like similar web forums (reddit etc.)
 
 -------------------------------------------------
 
@@ -100,6 +99,15 @@ Throughout the site, users may encounter various errors and it is important that
 
 When errors are encountered, the site should clearly display a pop-up or other obvious visual indicator that describes and highlights their error and offers the best solution for the user to resolve such error. This means not using error codes, 404 pages or other confusing dead ends. Errors should also try to retain as much progress as possible for the user so they don't end up having to rewrite things when they encounter an error.
 
+### Match Between System and the Real-World
+
+When designing the site, words and images should be familiar to the real world. For example, icons and such should use objects or familiar symbols from the real world so that users know what they mean. Language should be plain and direct instead of technical.
+
+### Error Prevention
+
+The system should always do what it can do prevent users from creating errors. For example, there should be indicators to as whether a user's input is correct and there should always be confirmation messages for irreversable or major actions.
+
+This is important to the site as it means users don't have to worry about causing errors themselves as the site will always give them a warnig.
 
 -------------------------------------------------
 
@@ -179,26 +187,99 @@ Users can add comments to topics (previously called threads) at the bottom of th
 
 There were also other planned features seen in the development document such as the search bar and notification bell which didn't make the final cut.
 
-### Review of IMPLICATION NAME HERE
+### Review of Social Implications
 
-Replace this text with brief notes showing how the implication was addressed in the final outcome. Accompany the notes with screenshots / other media to illustrate specific features.
+I addressed the social implications of the site in a multitude of ways.
+- Problematic users can be banned from the website
+- Harmful posts and comments can be removed from the website by administrators and moderators
+- I created a rules post to outline what is and isn't allowed on the site
 
-### Review of IMPLICATION NAME HERE
+![alt text](images/linebreak-3.png)
 
-Replace this text with brief notes showing how the implication was addressed in the final outcome. Accompany the notes with screenshots / other media to illustrate specific features.
+To further address the social implications, I could have:
+- Added modmail for users to contact moderators
+- Added a report button to report topics, comments and users
+- Added an automatic filter for swear words and NSFW content
+- Added a private message system between users for communication
 
-### Review of IMPLICATION NAME HERE
+### Review of Aesthetic Implications
 
-Replace this text with brief notes showing how the implication was addressed in the final outcome. Accompany the notes with screenshots / other media to illustrate specific features.
+To address the aesthetic implications of the site, I made sure I had a good color scheme which I produced with my end user with a focus on clarity. I also made sure my color scheme worked with switching from dark and light mode depending on what your browser is set to. I used a simplistic, bold font for readability. My design had a fairly clean and simple UI, not using any space for unnecessary clutter and keeping things streamlined and direct.
 
-### Review of UX PRINCIPLE NAME HERE
+To keep a consistent aesthetic throughout the site, I made sure the layout of each page was at least somewhat consistent throughout. The headers were always in the same place and the content was always centered in the same place. This means the content was always in the same place when the user switches to a new page. Buttons across the site also had universal colors depending on function (grey = link, green = submit, red = delete) and all had the same styling. I used emojis for icons which gave them a consistent aesthetic across the site.
 
-Replace this text with brief notes showing how the UX principle was addressed in the final outcome. Accompany the notes with screenshots / other media to illustrate specific features.
+![alt text](images/confirm.png)
+![alt text](images/delete.png)
+![alt text](images/button.png)
 
-### Review of UX PRINCIPLE NAME HERE
+### Review of Functionality Implications
 
-Replace this text with brief notes showing how the UX principle was addressed in the final outcome. Accompany the notes with screenshots / other media to illustrate specific features.
+To address the functionality implications which I laid out for my website, rigorous bug testing and boundary testing took place both by me and my end users. I tested every system on the website. To ensure the code works properly on all browsers, I ran the code through an HTML, PHP and CSS validator.
 
-### Review of UX PRINCIPLE NAME HERE
+### Review of Usability Implications
 
-Replace this text with brief notes showing how the UX principle was addressed in the final outcome. Accompany the notes with screenshots / other media to illustrate specific features.
+To address the useability of the website, I made sure to have a clean and refined design. One way in which I did this was to always have the header clear at the top with links to all of the main pages of the site which is something familiar to a lot of other websites. This also means users can always back out of a page by using the navigation menu at the top or by going back on their browser. The design is also consistent throughout the website with the buttons being consistent and clear and hyperlinks all being highlighted orange so users know when they can click one to go to another page. The site always has a header at the top of the page so users know what page they are on too.
+
+![alt text](images/usability-1.png)
+
+### Review of Visibility of System Status
+
+I addressed the visibility of system status in various ways throughout the website. For example, if users try to go to various places to do certain actions, it is instead replaced with a message urging them to log in or sign up.
+When they try to open a topic signed out:
+
+![alt text](images/visibility-1.png)
+
+If users try to make a comment when they are signed out:
+
+![alt text](images/visibility-2.png)
+
+Alternatively, when users are logged in the site greets them with a message:
+
+![alt text](images/visibility-3.png)
+
+### Review of User Control and Freedom
+
+To address user control, I always made sure users could back out of forms etc. Users can always use the browser back button to go back on pages and are never forced to fill in a form. Users can also always back out by clicking any links on the header. When editing their profile, I added a cancel button which means none of their changes will be saved:
+
+![alt text](images/control-1.png)
+
+Furthermore, users have the ability to delete their own posts at will:
+
+![alt text](images/control-2.png)
+
+### Review of Help Users Recognize, Diagnose and Recover from Errors
+
+When errors do inevitably occur on the website, I implemented various error codes and such to help users diagnose their issue. For example:
+
+- When users input a username that doesn't exist on the login page:
+
+![alt text](images/error-1.png)
+
+- When users input a username that exists but get the password wrong on the login page:
+
+![alt text](images/error-2.png)
+
+- When users are creating an account and the username is too short:
+
+![alt text](images/error-3.png)
+
+- When users are creating an account and the username is already taken:
+
+![alt text](images/error-4.png)
+
+Furthermore, all of the forms have ```max-length``` set so that users are prevented from going over the boudary and a ```min-length``` so users go above the set boundary.
+
+### Match Between System and the Real-World
+
+To address the match between system and the real world, I used familiar language across the site (i.e. topics, comments etc) so that people would understand what I meant. I also used emoji icons across the site which correlated to real world objects that people can identify. For example, the pinned icon was a pin, the locked icon was a padlock and the administrator and moderator icons were shields.
+
+![alt text](images/lockandpin.png)
+![alt text](images/adminshield.png)
+![alt text](images/moderatorshield.png)
+
+### Error Prevention
+
+To prevent users from creating errors, I implemented a few systems. For example, whenever a major action is going to take place, the site has an ```hx-confirm``` message set:
+
+![alt text](images/error-prev-1.png)
+![alt text](images/error-prev-2.png)

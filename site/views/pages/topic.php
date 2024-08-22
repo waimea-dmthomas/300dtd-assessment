@@ -30,7 +30,7 @@ foreach($topics as $topic) {
         echo '<h1>' . $topic['title'] . '</h1>';
         if($user['banned']) echo '<p>Posted by Banned User ' . $user['id'] . '🚫</p>';
         else echo '<p id="topic-op">Posted by ' . '<a href="/profile/' . $user['id'] . '">' . $user['username'] . '</a>' . '</p>';
-        echo '<p>' . $topic['body'] . '</p>';   
+        echo '<p id="topic-body">' . $topic['body'] . '</p>';   
     echo '</article>';
 
     // Topic admin panel
@@ -63,6 +63,20 @@ foreach($topics as $topic) {
                 ?>
             </button>
 
+            <button
+                class="delete-button"
+                hx-delete="/delete-topic/<?= $topic['id'] ?>"
+                hx-confirm="Really delete this topic?"
+            >
+                <?php
+                    echo 'Delete Topic'
+                ?>
+            </button>
+        <?php
+        echo '</article>';
+    elseif($op == $userId):
+        echo '<article id="topic-admin-panel">';
+        ?>
             <button
                 class="delete-button"
                 hx-delete="/delete-topic/<?= $topic['id'] ?>"

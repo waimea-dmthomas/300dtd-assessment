@@ -39,14 +39,14 @@
 
 ### Database Testing
 
-- [ ] **A** Database queries have been tested to ensure that they obtain the required data. Documented evidence of this
+- [x] **A** Database queries have been tested to ensure that they obtain the required data. Documented evidence of this
 
 > Comments...  
 
 ### Functionality Testing
 
-- [ ] **A** Functionality has been tested and there is evidence for this (screenshots, etc.)
-- [ ] **M** Testing is thorough (all functionality covered)
+- [x] **A** Functionality has been tested and there is evidence for this (screenshots, etc.)
+- [x] **M** Testing is thorough (all functionality covered)
 
 > Comments...  
 

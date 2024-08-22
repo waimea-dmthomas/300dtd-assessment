@@ -40,7 +40,9 @@ if($stmt->rowCount() > 0) {
 
                 // Topic body
                 echo '<article id="topic-article-body">';
-                    echo '<p>' . $topic['body'] . '</p>';
+                    echo '<div class="overlay">';
+                        echo '<p>' . $topic['body'] . '</p>';
+                    echo '</div>';
                 echo '</article>';
 
                 // Topic op
