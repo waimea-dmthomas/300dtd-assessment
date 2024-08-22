@@ -70,9 +70,9 @@ I intend to present this design to my end-user for refinements and improvements 
 
 ## 31/05/2024
 
-> ![alt text](image.png)
-> ![alt text](image-1.png)
-> ![alt text](image-5.png)
+> ![alt text](images/image.png)
+> ![alt text](images/image-1.png)
+> ![alt text](images/image-5.png)
 
 ### **Figma website design prototype 2**
 
@@ -80,27 +80,27 @@ After presenting the design to my end users, I recieved some feedback on the des
 
 They felt that the gradient made the UI look slightly outdated and that it should be up to modern design principles, so I toned down the gradient effect on the background and the header. They also felt that the buttons shouldn't be at the top from a user experience perspective, so I moved them down to the bottom.
 
-![alt text](image-4.png)
+![alt text](images/image-4.png)
 
 ### **Figma desktop design prototype**
 
 I also began working on the desktop version of the design. I wanted a layout reminiscent of old web forums but with updated visuals and useability adhering to the useability heuristics. I created a table-like design for the forum category selection menu.
 
-![alt text](image-6.png)
+![alt text](images/image-6.png)
 
 ## 02/05/2024
 
 I sent the new mobile design back to my end users who were overall happy with the design meaning I could move forward to doing the color palette.
 
-> ![alt text](image-9.png)
+> ![alt text](images/image-9.png)
 
 I then got some feedback for the desktop design and required a few little tweaks.
 
-> ![alt text](image-14.png)
+> ![alt text](images/image-14.png)
 
 I also began to work on a color palette for the site using RealtimeColors integrated into Figma:
 
-![alt text](image-8.png)
+![alt text](images/image-8.png)
 
 ### Color palette
 
@@ -108,26 +108,26 @@ I came up with this color palette and sent it to my end users. I selected these 
 
 ## 03/05/2024
 
-> ![alt text](image-10.png)
-> ![alt text](image-11.png)
-> ![alt text](image-13.png)
+> ![alt text](images/image-10.png)
+> ![alt text](images/image-11.png)
+> ![alt text](images/image-13.png)
 
 I sent the color palette to my end users for feedback. They suggested to make it similar to Discord's color palette, which is a little more muted and maybe easier to read. They weren't a big fan of the shade of blue I used too.
 
 I came up with a new color palette that's a little toned down:
 
-![alt text](image-16.png)
+![alt text](images/image-16.png)
 
 I also updated the desktop design following the feedback I received:
 
-![alt text](image-18.png)
+![alt text](images/image-18.png)
 
 ## 04/05/2024
 
 I got some feedback on the new color palette:
 
-> ![alt text](image-15.png)
-> ![alt text](image-17.png)
+> ![alt text](images/image-15.png)
+> ![alt text](images/image-17.png)
 
 And quickly applied these changes so I could finalize the color palette with my end users. I also sent back the desktop design so I could finalize that design.
 
@@ -135,8 +135,8 @@ And quickly applied these changes so I could finalize the color palette with my 
 
 I got the feedback on the color palette and it needed a bit of tweaking on the navbar, which I quickly fixed.
 
-![alt text](image-19.png)
+![alt text](images/image-19.png)
 
 Here was my finalized mobile design after adjusting the shade of grey for contrast:
 
-![alt text](image-21.png)
+![alt text](images/image-21.png)
