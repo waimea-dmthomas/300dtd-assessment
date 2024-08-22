@@ -7,7 +7,7 @@ require_once 'lib/db.php';
 // Connect
 $db = connectToDB();
 
-// Try to find a category with the given title
+// Set moderator to opposite of value
 $query = 'UPDATE users SET moderator = NOT moderator WHERE id = ?';
 $stmt = $db->prepare($query);
 $stmt->execute([$id]);

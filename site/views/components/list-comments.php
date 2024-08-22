@@ -9,7 +9,7 @@ require_once 'lib/globals.php';
 $db = connectToDB();
 
 // Get comments from topic
-$query = 'SELECT * FROM comments WHERE topic = ?';
+$query = 'SELECT * FROM comments WHERE topic = ? ORDER BY timestamp DESC';
 $stmt = $db->prepare($query);
 $stmt->execute([$id]);
 $comments = $stmt->fetchAll();
@@ -37,7 +37,7 @@ foreach($comments as $comment) {
         echo '</div>';
 
         // Admin delete button
-        if($isAdmin):
+        if($isAdmin || $isModerator):
             ?> <button
                 class="delete-button"
                 hx-delete="/delete-comment/<?= $comment['id'] ?>"

@@ -177,6 +177,27 @@ I finished a working prototype of the website which I allowed my end users to te
 - It would be nice if admins could pin and lock posts
 - The forms have no example text
 
+## 10/06/2024
+
+I focused on fixing some of the issues presented by my end users.
+
+- I added profile statistics onto the profile page
+
+![alt text](images/profilestats.png)
+
+- I added profile statuses and bios onto the profile page which can be edited through the "edit profile" button
+
+![alt text](images/profilestatusbio.png)
+
+- I added a new favicon to the website
+
+![alt text](images/favicon.png)
+
+- I added the functionality to pin/lock posts for admins. When posts are pinned, they are automatically listed first on the topic list and when posts are locked, no further comments can be made however the already posted comments can be viewed. I had some trouble figuring out how to prioritise pinned posts before the newest posts, but I figured it out.
+
+![alt text](images/pinlock.png)
+![alt text](images/pinlock2.png)
+
 ## Bug testing
 
 ### Confirm messages
@@ -209,3 +230,16 @@ I have extensively tested my database queries and have included proper error mes
 - [Delete post/comment (DELETE)](https://mywaimeaschool-my.sharepoint.com/:v:/g/personal/dmthomas_waimea_school_nz/EdNFlTgr-ddFk_V1QZkMc-oBwQKkcLXmciLeqpMoknGD8w?e=2n30Ep&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
 
 ### Functionality Testing
+I have tested the many different functions of my website as can be seen in these videos:
+
+- [Forum system](https://mywaimeaschool-my.sharepoint.com/:v:/g/personal/dmthomas_waimea_school_nz/EYMjeVcxHtFHkZX_814ugBIB1GuJHlSSLV7HfDv0elNOxQ?e=WoL1bV&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
+
+- [Admin functions](https://mywaimeaschool-my.sharepoint.com/:v:/g/personal/dmthomas_waimea_school_nz/EetpL1ftRrZAqg6vnTBU1gUB0u1HwqkB_Ygzr-JpQ6HmWQ?e=wbuk1l&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
+(moderators work similarly but cannot access the admin panel, can only delete/pin/lock posts and delete comments)
+
+- [Profile and user system](https://mywaimeaschool-my.sharepoint.com/:v:/g/personal/dmthomas_waimea_school_nz/EbIFFZeKGXVBnH8_NZ4AyegB7p3VvxVRQm2mn53BYTO7qg?e=GGWQTI&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
+
+- [Login, logout and signup system](https://mywaimeaschool-my.sharepoint.com/:v:/g/personal/dmthomas_waimea_school_nz/ERR_aUST_P1EoaFmGOj3xW8B2zjK5KqfCCG3iExyv-YgCg?e=rXNig6&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
+
+### Code Testing
+I have validated both my HTML and CSS code as seen here:

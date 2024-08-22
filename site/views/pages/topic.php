@@ -34,7 +34,7 @@ foreach($topics as $topic) {
     echo '</article>';
 
     // Topic admin panel
-    if($isAdmin):
+    if($isAdmin || $isModerator):
         echo '<article id="topic-admin-panel">';
         ?>
             <button

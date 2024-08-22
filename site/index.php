@@ -59,7 +59,7 @@ $router->route(GET,     HTMX,   '/users',                   'components/list-use
 
 $router->route(GET,     PAGE,   '/profile/$id',             'pages/profile.php');
 $router->route(GET,     HTMX,   '/edit-profile/$id',        'components/edit-profile.php');
-$router->route(POST,     HTMX,   '/process-edit-profile/$id','actions/process-edit-profile.php');
+$router->route(POST,    HTMX,   '/process-edit-profile/$id','actions/process-edit-profile.php');
 
 $router->route(GET,     PAGE,   '/login',                   'pages/login.php');
 $router->route(POST,    HTMX,   '/login',                   'actions/login-user.php');

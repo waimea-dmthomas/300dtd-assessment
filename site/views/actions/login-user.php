@@ -35,6 +35,7 @@ if ($userData) {
 
             // Save user info for later use
             $_SESSION['user']['admin'] = $userData['admin'];
+            $_SESSION['user']['moderator'] = $userData['moderator'];
             $_SESSION['user']['username'] = $userData['username'];
             $_SESSION['user']['id'] = $userData['id'];
 

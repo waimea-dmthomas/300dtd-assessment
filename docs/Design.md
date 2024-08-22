@@ -134,11 +134,50 @@ When errors are encountered, the site should clearly display a pop-up or other o
 
 ### Meeting the Needs of the Users
 
-Replace this text with a brief evaluation of how well you met the needs of your users. Look at what you initially wrote about who they are, what specific needs they have, etc. and discuss how well the system meets those needs.
+I think I have successfully met the needs my users. I needed to create a place where formal and centralized discussions can take place and I believe that my forum site successfully allows users to do so by opening topics and leaving comments. I could have created more social options on the site like private messaging and such too though along with image embedding so that users could further communicate.
 
 ### Meeting the System Requirements
 
-Replace this text with a brief evaluation of how well you met the requirements that you defined at the start of the project, etc. Look back at the list of features / functionality you initially set and discuss how well your system has implemented each one.
+I think I fulfilled most of the original system requirements. However, there are a few things that I missed.
+
+Proposed features included:
+- Account sign up, sign in and logout
+
+This was succesfully met with a functioning login, logout and signup system
+
+- Account profile pages with user stats/info
+
+This was successfully met as users can access both their own and other user's profiles, with the profiles showing their admin/moderator status, join date, topic count and comment count. The profiles also show customizable statuses and bio's with an accomodating edit profile poage.
+
+- Account deletion system
+
+I originally had an account deletion system set up where moderators could delete user accounts, but I ended up changing it to a ban system, where moderators can ban users (meaning their topics and comments still stay up but they cannot log into their accounts, their username shows up as "Banned User UserID", they don't show up on the user list and their profiles are inaccessible.) This means that all of the banned user data doesn't get erased and they can be freely unbanned at will.
+
+- Secure account password hashing
+
+Passwords are hashed and cannot be viewed even to admins with database access since the non-hashed passwords are never added to the database.
+
+- Special account permissions i.e. administrator
+
+Users with administrator permissions can access a special admin menu where they can set other administrators, set moderators and ban users. Users with administrator permissions can also delete topics and comments and also add new categories to the forum on the site. Administrators can also lock topics, meaning new comments can't be added, and pin topics meaning they show up at the top of the category. Similarly, users with moderator permissions can only delete topics, delete comments, pin posts and lock posts without the other powers of administrators.
+
+- Ability for administrators to remove threads/comments and ban users
+
+See above.
+
+- Forum topics (sections i.e. development, off-topic etc.) that can be created by administrators
+
+Administrators have the power to add new categories (which were previously called topics) on the site and can set a title and description.
+
+- Forum threads that can be created by users with the ability to attach code excerpts/images and embed videos
+
+Users can successfully create topics (previously called forum threads) however due to time constraints I didn't get around to adding embed / attach functionality to the new topic form.
+
+- Thread comment system
+
+Users can add comments to topics (previously called threads) at the bottom of the topic's page. Administrators can lock posts to not allow further comment.
+
+There were also other planned features seen in the development document such as the search bar and notification bell which didn't make the final cut.
 
 ### Review of IMPLICATION NAME HERE
 
