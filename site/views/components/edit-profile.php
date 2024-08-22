@@ -14,6 +14,9 @@ $stmt = $db->prepare($query);
 $stmt->execute([$id]);
 $user = $stmt->fetch();
 
+$status = $user['status'];
+$bio = $user['bio'];
+
 // Edit profile form
 ?>
 <form
@@ -40,8 +43,14 @@ $user = $stmt->fetch();
             ?>
         </header>
         
-        <label>Profile Picture</label>
-        <input name="icon" type="file" accept="image/*"></input>
-        <!-- <input name="status" type="text"></input> -->
+        <label>Status</label>
+        <?php
+            echo '<input name="status" type="text" value="' . $status . '"></input>';
+        ?>
+
+        <label>Bio</label>
+        <?php
+            echo '<textarea name="bio" type="text" >' . $bio . '</textarea>';
+        ?>
     </article>
 </form>

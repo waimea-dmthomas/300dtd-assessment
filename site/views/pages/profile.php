@@ -62,7 +62,13 @@ foreach($users as $user) {
                 echo '<p>Member since: ' . $user['joined'] . '</p>';
                 echo '<p>Topics opened: ' . $stmt2->rowCount() . '</p>';
                 echo '<p>Comments left: ' . $stmt3->rowCount() . '</p>';
+                
+                echo '<div id="profile-bio">';
+                    echo '<p>' . $user['bio'] . '</p>';
+                echo '</div>';
             echo '</div>';
+
+
 
         echo '</div>';
 

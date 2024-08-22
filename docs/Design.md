@@ -107,11 +107,12 @@ When errors are encountered, the site should clearly display a pop-up or other o
 
 ### Database Structure
 
-Place a image here that shows the *final design* of your database: tables, fields and relationships.
+![alt text](images/mysql-4.png)
 
 ### User Interface Design
 
-Place images here that show your *final design* of your UI: layout, colours, etc.
+![alt text](images/figma-color-3.png)
+![alt text](images/final-design.png)
 
 
 -------------------------------------------------
@@ -120,11 +121,11 @@ Place images here that show your *final design* of your UI: layout, colours, etc
 
 ### Database Structure
 
-Place a image here that shows the *actual database structure* that you implemented: tables, fields and relationships.
+![alt text](images/db-structure.png)
 
 ### User Interface Design
 
-Place screenshots and notes here that show your *actual system UI* in action.
+![alt text](images/final-site.png )
 
 
 -------------------------------------------------

@@ -198,6 +198,10 @@ main {
     margin-left: 1rem;
 }
 
+#profile-bio {
+    padding-top: 1rem;
+}
+
 /* USERS ---------------------------------------- */
 
 #list-users-icon {

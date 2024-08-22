@@ -6,8 +6,8 @@
 ## System Requirements	
 
 - [x] **A** Purpose of outcome identified and described, listing specific requirements
-- [ ] **A** End-users identified and described, listing specific requirements
-- [ ] **A** Key functionality that satisfies the purpose and end-user requirements identified
+- [x] **A** End-users identified and described, listing specific requirements
+- [x] **A** Key functionality that satisfies the purpose and end-user requirements identified
 - [x] **A** Implications, relevant to purpose and end-users, are described and linked to design of outcome
 - [x] **M** UX design principles, relevant to purpose, identified, described and linked to design of outcome
 
@@ -19,17 +19,17 @@
 
 ## Database Structure	
 
-- [ ] **A** Structure of the database is designed (tables, fields, data types, primary keys, relationships, etc.)
-- [ ] **M** Structure of the database is logical (i.e. DB is normalised, tables / fields are named logically, etc.)
+- [x] **A** Structure of the database is designed (tables, fields, data types, primary keys, relationships, etc.)
+- [x] **M** Structure of the database is logical (i.e. DB is normalised, tables / fields are named logically, etc.)
 
 > Comments...
 
 
 ## Front-End UI Designs
 
-- [ ] **A** Design for key web pages have been sketched out with supporting notes, etc.
+- [x] **A** Design for key web pages have been sketched out with supporting notes, etc.
 - [ ] **E** Design ideas for website are detailed.
-- [ ] **E** Design takes into account input from the end users
+- [x] **E** Design takes into account input from the end users
 - [ ] **E** Selection of design features with justification related to requirements / UX principles
 
 > Comments...

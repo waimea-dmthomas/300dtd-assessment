@@ -154,4 +154,29 @@ Here was my finalized mobile design after adjusting the shade of grey for contra
 
 ## 10/05/2024
 
-I decided to move on from the 
+I decided to move on from the  design stage and actually begun to create my functional website. First, I decided use MySQL to create the database which I refined with my end users on DrawSQL. This is where my website will be storing its data.
+
+![alt text](images/mysql-3.png)
+
+This ran into a few problems which my end users identified:
+- The naming was confusing. I.e., threads should be called topics and topics should be called categories.
+- The body and title didn't have proper limits.
+- The database didn't have timestamps.
+
+I worked through these problems by:
+- Changing the naming conventions on the site.
+- Giving the title a 128 character limit.
+- Giving the body a 20,000 character limit (approx. 3000 words). Since it is a text and not varchar, I would have to make this limit when programming the create topic form.
+- Creating a timestamp column with [CURRENT_TIMESTAMP] autoassigned.
+
+## 5/06/2024
+
+I finished a working prototype of the website which I allowed my end users to test. Here is some of the feedback they gathered for me:
+- Profiles were a useless feature since they didn't display any information or offer any customization about the user.
+- The website doesn't have a favicon
+- It would be nice if admins could pin and lock posts
+- The forms have no example text
+
+## Code Testing
+
+I 
