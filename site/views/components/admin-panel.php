@@ -45,20 +45,23 @@ echo '<table id="main-users">';
             echo '<td>';
                 ?>
                     <p>
-                        <button
-                            hx-put="/process-admin/<?= $user['id'] ?>"
-                            hx-confirm="Really give admin permissions to this user?"
-                            class="danger"
-                        >
-                            <?php
-                                if ($user['admin']) {
-                                    echo 'Yes';
-                                }
-                                else {
-                                    echo 'No';
-                                }
-                            ?>
-                        </button>
+                        <?php if ($user['admin']): ?>
+                            <button
+                                hx-put="/process-admin/<?= $user['id'] ?>"
+                                hx-confirm="Really remove admin permissions to this user?"
+                                class="danger"
+                             >
+                                Yes
+                            </button> 
+                        <?php else: ?>
+                            <button
+                                hx-put="/process-admin/<?= $user['id'] ?>"
+                                hx-confirm="Really give admin permissions to this user?"
+                                class="danger"
+                            >
+                                No
+                            </button>
+                        <?php endif; ?>
                     </p>
                 <?php
             echo '</td>';
@@ -67,44 +70,50 @@ echo '<table id="main-users">';
             echo '<td>';
                 ?>
                     <p>
-                        <button
-                            hx-put="/process-moderator/<?= $user['id'] ?>"
-                            hx-confirm="Really give moderator permissions to this user?"
-                            class="danger"
-                        >
-                            <?php
-                                if ($user['moderator']) {
-                                    echo 'Yes';
-                                }
-                                else {
-                                    echo 'No';
-                                }
-                            ?>
-                        </button>
+                        <?php if ($user['moderator']): ?>
+                            <button
+                                hx-put="/process-moderator/<?= $user['id'] ?>"
+                                hx-confirm="Really remove moderator permissions to this user?"
+                                class="danger"
+                             >
+                                Yes
+                            </button> 
+                        <?php else: ?>
+                            <button
+                                hx-put="/process-moderator/<?= $user['id'] ?>"
+                                hx-confirm="Really give moderator permissions to this user?"
+                                class="danger"
+                            >
+                                No
+                            </button>
+                        <?php endif; ?>
                     </p>
                 <?php
             echo '</td>';
 
             // Delete user
             echo '<td>';
-                ?>
-                    <p>
-                        <button
-                            class="delete-button"
-                            hx-delete="/process-ban-user/<?= $user['id'] ?>"
-                            hx-confirm="Really ban this user?"
-                        >
-                            <?php
-                                if ($user['banned']) {
-                                    echo 'Unban User';
-                                }
-                                else {
-                                    echo 'Ban User';
-                                }
-                            ?>
-                        </button>
-                    </p>
-                <?php
+            ?>
+            <p>
+                <?php if ($user['banned']): ?>
+                    <button
+                        hx-delete="/process-ban-user/<?= $user['id'] ?>"
+                        hx-confirm="Really unban this user?"
+                        class="delete-button"
+                     >
+                        Unban User
+                    </button> 
+                <?php else: ?>
+                    <button
+                        hx-delete="/process-ban-user/<?= $user['id'] ?>"
+                        hx-confirm="Really ban this user?"
+                        class="delete-button"
+                    >
+                        Ban User
+                    </button>
+                <?php endif; ?>
+            </p>
+        <?php
             echo '</td>';
 
         echo '</tr>';

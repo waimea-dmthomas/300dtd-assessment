@@ -8,9 +8,9 @@
     >
         <h2>Add Category</h2>
 
-        <input name="title" type="text" placeholder="Title" required>
+        <input name="title" type="text" placeholder="Title" maxlength="64" required>
 
-        <textarea name="description" type="text" placeholder="Description" required></textarea>
+        <textarea name="description" type="text" placeholder="Description" maxlength="256" required></textarea>
 
         <input type="submit" value="Add">
 

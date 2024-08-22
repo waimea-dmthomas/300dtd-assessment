@@ -8,8 +8,9 @@ require_once 'lib/db.php';
 $db = connectToDB();
 
 $status = $_POST['status'];
+$bio = $_POST['bio'];
 
-$query = "UPDATE users SET status = '$status' WHERE id = ?";
+$query = "UPDATE users SET status = '$status', bio = '$bio' WHERE id = ?";
 $stmt = $db->prepare($query);
 $stmt->execute([$id]);
 
