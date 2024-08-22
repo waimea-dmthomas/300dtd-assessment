@@ -70,9 +70,9 @@ I intend to present this design to my end-user for refinements and improvements 
 
 ## 31/05/2024
 
-> ![alt text](images/image.png)
-> ![alt text](images/image-1.png)
-> ![alt text](images/image-5.png)
+> ![alt text](images/figma-feedback-1.png)
+> ![alt text](images/figma-feedback-2.png)
+> ![alt text](images/figma-feedback-3.png)
 
 ### **Figma website design prototype 2**
 
@@ -80,63 +80,78 @@ After presenting the design to my end users, I recieved some feedback on the des
 
 They felt that the gradient made the UI look slightly outdated and that it should be up to modern design principles, so I toned down the gradient effect on the background and the header. They also felt that the buttons shouldn't be at the top from a user experience perspective, so I moved them down to the bottom.
 
-![alt text](images/image-4.png)
+![alt text](images/figma-2.png)
 
 ### **Figma desktop design prototype**
 
 I also began working on the desktop version of the design. I wanted a layout reminiscent of old web forums but with updated visuals and useability adhering to the useability heuristics. I created a table-like design for the forum category selection menu.
 
-![alt text](images/image-6.png)
+![alt text](images/figma-desktop-1.png)
 
 ## 02/05/2024
 
 I sent the new mobile design back to my end users who were overall happy with the design meaning I could move forward to doing the color palette.
 
-> ![alt text](images/image-9.png)
+> ![alt text](images/figma-2-feedback-1.png)
 
 I then got some feedback for the desktop design and required a few little tweaks.
 
-> ![alt text](images/image-14.png)
+> ![alt text](images/figma-desktop-feedback-1.png)
 
-I also began to work on a color palette for the site using RealtimeColors integrated into Figma:
+I also began to work on a fewcolor palette for the site using RealtimeColors integrated into Figma:
 
-![alt text](images/image-8.png)
+![alt text](images/figma-color.png)
 
 ### Color palette
 
 I came up with this color palette and sent it to my end users. I selected these colors because the darker palette is easy on the eyes and the text is nice and contrasted to the dark background. Not to mention, the foreground elements stand out a lot compared to the background which helps with readability. The orange accent is for when buttons and such are hovered over and massively contrasts with the blue, as orange opposes blue on a color wheel.
 
+The live preview of this design is on figma [here](https://www.figma.com/design/YNYFo6fAqYkV5rhpD3tLwF/Mobile-Iteration-1?node-id=0-1&t=WaUFJLY9HgXuoSTF-1)
+
+I ran this pallete through a colour contrast checker to account for accessibility too:
+![alt text](images/contrastchecker.png)
+
 ## 03/05/2024
 
-> ![alt text](images/image-10.png)
-> ![alt text](images/image-11.png)
-> ![alt text](images/image-13.png)
+> ![alt text](images/figma-color-feedback-1.png)
+> ![alt text](images/figma-color-feedback-2.png)
+> ![alt text](images/figma-color-feedback-3.png)
 
 I sent the color palette to my end users for feedback. They suggested to make it similar to Discord's color palette, which is a little more muted and maybe easier to read. They weren't a big fan of the shade of blue I used too.
 
 I came up with a new color palette that's a little toned down:
 
-![alt text](images/image-16.png)
+![alt text](images/figma-color-2.png)
+
+The live preview of this design is on figma [here](https://www.figma.com/design/YNYFo6fAqYkV5rhpD3tLwF/Mobile-Iteration-1?node-id=0-1&t=WaUFJLY9HgXuoSTF-1)
 
 I also updated the desktop design following the feedback I received:
+- Changed the table inner corners to no longer be rounded
+- Updated the gradient slightly
 
-![alt text](images/image-18.png)
+![alt text](images/figma-desktop-2.png)
+
+The live preview of this design is on figma [here](https://www.figma.com/design/mTuokHf0KFDsbr4ljA1Qsz/Desktop-Iteration-1?node-id=0-1&t=7YCcoBg3WWc1u0b8-1)
 
 ## 04/05/2024
 
 I got some feedback on the new color palette:
 
-> ![alt text](images/image-15.png)
-> ![alt text](images/image-17.png)
+> ![alt text](images/figma-color-2-feedback-1.png)
+> ![alt text](images/figma-color-2-feedback-2.png)
 
 And quickly applied these changes so I could finalize the color palette with my end users. I also sent back the desktop design so I could finalize that design.
 
 ## 05/05/2024
 
-I got the feedback on the color palette and it needed a bit of tweaking on the navbar, which I quickly fixed.
+I got the feedback on the color palette and it needed a bit of tweaking on the navbar, which I quickly fixed. The color pallete was also going to slightly change based on if the users's browser is on light/dark mode, meaning if on light mode the black background would be a light grey.
 
-![alt text](images/image-19.png)
+> ![alt text](images/figma-color-3-feedback-1.png)
 
 Here was my finalized mobile design after adjusting the shade of grey for contrast:
 
-![alt text](images/image-21.png)
+![alt text](images/figma-color-3.png)
+
+## 10/05/2024
+
+I decided to move on from the 
