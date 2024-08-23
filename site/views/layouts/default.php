@@ -9,11 +9,17 @@
         
         <?php require '_header.php'; ?>
 
-        <main>
+        <main class="content">
 
             <?php require $pageContent; ?>
         
         </main>
+
+        <div class="mobile-footer">
+
+            <?php require '_mobile-footer.php'; ?>
+
+        </div>
 
         <?php require '_footer.php'; ?>   
 

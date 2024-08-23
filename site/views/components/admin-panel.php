@@ -19,7 +19,7 @@ $users = $stmt->fetchAll();
 consoleLog($users, 'DB Data');
 
 // Echo admin panel
-echo '<table id="main-users">';
+echo '<table id="desktop-admin-panel">';
 
     // Table header
     echo '<tr>';
@@ -119,3 +119,91 @@ echo '<table id="main-users">';
         echo '</tr>';
     }
 echo '</table>';
+
+// Echo mobile admin panel
+echo '<div id="mobile-admin-panel">';
+
+    // Loop through users
+    foreach($users as $user) {
+        echo '<article id="mobile-admin-article">';
+        
+            // Usernames
+            echo '<div id="mobile-admin-username">';
+                echo '<b>' . $user['username'] . '</b>';
+                if($user['admin']) echo ' <img src="images/admin.png" width="25px" title="Admin">';
+                if($user['moderator']) echo ' <img src="images/moderator.png" width="25px" title="Moderator">';
+                if($user['banned']) echo '🚫';
+            echo '</div>';
+
+            // Admin permissions
+            ?>
+                <p>
+                    <?php if ($user['admin']): ?>
+                        <button
+                            hx-put="/process-admin/<?= $user['id'] ?>"
+                            hx-confirm="Really remove admin permissions to this user?"
+                            class="danger"
+                            >
+                            Admin: Yes
+                        </button> 
+                    <?php else: ?>
+                        <button
+                            hx-put="/process-admin/<?= $user['id'] ?>"
+                            hx-confirm="Really give admin permissions to this user?"
+                            class="danger"
+                        >
+                            Admin: No
+                        </button>
+                    <?php endif; ?>
+                </p>
+            <?php
+            
+            // Moderator permissions
+            ?>
+                <p>
+                    <?php if ($user['moderator']): ?>
+                        <button
+                            hx-put="/process-moderator/<?= $user['id'] ?>"
+                            hx-confirm="Really remove moderator permissions to this user?"
+                            class="danger"
+                            >
+                            Moderator: Yes
+                        </button> 
+                    <?php else: ?>
+                        <button
+                            hx-put="/process-moderator/<?= $user['id'] ?>"
+                            hx-confirm="Really give moderator permissions to this user?"
+                            class="danger"
+                        >
+                            Moderator: No
+                        </button>
+                    <?php endif; ?>
+                </p>
+            <?php
+
+            // Delete user
+            ?>
+                <p>
+                    <?php if ($user['banned']): ?>
+                        <button
+                            hx-delete="/process-ban-user/<?= $user['id'] ?>"
+                            hx-confirm="Really unban this user?"
+                            class="delete-button"
+                        >
+                            Unban User
+                        </button> 
+                    <?php else: ?>
+                        <button
+                            hx-delete="/process-ban-user/<?= $user['id'] ?>"
+                            hx-confirm="Really ban this user?"
+                            class="delete-button"
+                        >
+                            Ban User
+                        </button>
+                    <?php endif; ?>
+                </p>
+            <?php
+
+        echo '</article>';
+    }
+echo '</div>';

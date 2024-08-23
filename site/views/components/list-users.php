@@ -20,7 +20,7 @@ consoleLog($users, 'DB Data');
 foreach($users as $user) {
 
     // User card
-    echo '<article>';
+    echo '<article id="user-card">';
 
         // Load icon
         ?>

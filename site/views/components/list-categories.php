@@ -17,7 +17,7 @@ $categories = $stmt->fetchAll();
 consoleLog($categories, 'DB Data');
 
 // Create table
-echo '<article>';
+echo '<article id="category-list">';
     echo '<table>';
 
         // Table header
@@ -66,4 +66,33 @@ echo '<article>';
             echo '</tr>';
         }
     echo '</table>';
+echo '</article>';
+
+// Create mobile list
+echo '<article id="mobile-category-list">';
+    // Loop through categores
+    foreach($categories as $category) {
+
+        // Get amount of topics
+        $categoryID = $category['id'];
+        $query2 = "SELECT * FROM topics WHERE category = '$categoryID' ORDER BY timestamp DESC";
+        $stmt2 = $db->prepare($query2);
+        $stmt2->execute();
+        $topic = $stmt2->fetch();
+
+        echo '<div id="mobile-category-div">';
+            echo '<a href="/category/' . $category['id'] . '" role="button">' . $category['title'] . '</a>';
+
+            echo '<p>' . $category['description'] . '</p>';
+
+            echo '<p>' . $stmt2->rowCount() . ' Topics</p>';
+                    
+            if ($stmt2->rowCount() > 1) {
+                    echo '<p>Last Activity ' . time_elapsed_string($topic['timestamp']) . '</p>';
+            }
+            else {
+                    echo '<p>Last Activity Never</p>';
+            }
+        echo '</div>';
+    }
 echo '</article>';

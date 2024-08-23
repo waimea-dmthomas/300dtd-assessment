@@ -15,7 +15,7 @@ $stmt->execute();
 $topics = $stmt->fetchAll();
 
 if($stmt->rowCount() > 0) {
-    echo '<section>';
+    echo '<section id="topic-list">';
 
         // Loop through topics
         foreach($topics as $topic) {

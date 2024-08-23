@@ -2,7 +2,8 @@
 
 <h1>Users</h1>
 
-<section  
+<section 
+    id="user-list"
     hx-get="/users"
     hx-trigger="load"
 >

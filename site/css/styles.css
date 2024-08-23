@@ -133,6 +133,17 @@ a[role="button"]:hover, button:hover, input[type="submit"]:hover, summary[role="
     font-size: 1.1rem;
 }
 
+#mobile-category-list {
+    display: none;
+}
+
+.content {
+    min-height: calc(100vh - 5em);
+    padding: 2em;
+}
+
+
+
 #main-nav menu {
     margin-top: 1.4rem;
 }
@@ -348,3 +359,141 @@ article {
     min-height: 6rem;
 }
 
+.mobile-footer {
+    display: none;
+}
+
+#mobile-admin-panel {
+    display: none;
+}
+
+/* MOBILE ---------------------------------------- */
+
+@media all and (max-width: 665px) {
+    #main-footer {
+        display: none;
+    }
+
+    .content {
+        padding: 1em;
+    }
+
+    #main-header {
+        background-image: linear-gradient(to right, var(--primary) 25%, rgba(0, 0, 0, 0)), url("../images/header.png");
+        background-position-y: -11rem;
+        background-position-x: left;
+    }
+
+    #main-nav a[role="button"] {
+        display: none;
+    }
+
+    /* MOBILE CATEGORY LIST */
+
+    #category-list {
+        display: none;
+    }
+
+    #mobile-category-list {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2rem;
+    }
+
+    #mobile-category-div {
+        margin-bottom: 1rem;
+    }
+
+    #categories-list {
+        display: flex;
+        justify-content: center;
+    }
+
+    #mobile-category-div {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* MOBILE USER LIST */
+
+    #user-list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #user-card {
+        flex-grow: 1;
+    }
+
+    /* MOBILE ADMIN PANEL */
+
+    #desktop-admin-panel {
+        display: none;
+    }
+
+    #mobile-admin-panel {
+        display: block;
+    }
+
+    #mobile-admin-article {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #mobile-admin-article button {
+        margin-bottom: 1rem;
+    }
+
+    #mobile-admin-article b {
+        margin-bottom: 1rem;
+    }
+
+    #mobile-admin-article img {
+        width: 25px;
+        height: 25px;
+        margin-left: 0.4rem;
+    }
+
+    #mobile-admin-username {
+        display: flex;
+        flex-direction: row;
+    }
+
+    /* MOBILE PROFILE */
+
+    #profile-body {
+        flex-direction: column;
+    }
+
+    /* MOBILE TOPIC */
+
+    #topic-list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #topic-article {
+        flex-grow: 1;
+    }
+
+    /* MOBILE FOOTER */
+
+    .mobile-footer {
+        display: flex;
+        position: sticky;
+        bottom: 0;
+        color: white;
+        min-height: 5em;
+        justify-content: space-between;
+    }
+
+    .mobile-footer a {
+        display: flex;
+        width: 100%;
+        padding: 0;
+        align-items: center;
+        justify-content: center;
+    }
+}
