@@ -251,5 +251,21 @@ I have tested the many different functions of my website as can be seen in these
 
 - [Login, logout and signup system](https://mywaimeaschool-my.sharepoint.com/:v:/g/personal/dmthomas_waimea_school_nz/ERR_aUST_P1EoaFmGOj3xW8B2zjK5KqfCCG3iExyv-YgCg?e=rXNig6&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
 
+- [Resizing for different resolutions and mobile compatibility](https://mywaimeaschool-my.sharepoint.com/:v:/g/personal/dmthomas_waimea_school_nz/EcoIw2ka0gBIoDhc-jTZJmgBb9TEuL7gyEd3RvywF87BHQ?e=dStvXZ&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
+
 ### Code Testing
-I have validated both my HTML and CSS code as seen here:
+I validated my CSS and had a few issues I needed to fix:
+![alt text](images/validate-1.png)
+I fixed up these issues by:
+- Changing ```:user-valid``` to ```:valid```
+- Changing ```scale(105%)``` to ```scale(1.05)```
+- Removing ```align-items: left````
+
+![alt text](images/validate-3.png)
+
+I then validated all of my PHP files which were all already free of issues:
+![alt text](images/validate-2.png)
+
+Then I validated the HTML which ran into a few issues which I fixed, and after ignoring the HTMX-related false positives the HTML validates:
+
+![alt text](images/validate-4.png)

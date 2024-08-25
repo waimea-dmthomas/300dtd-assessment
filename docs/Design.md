@@ -103,11 +103,13 @@ When errors are encountered, the site should clearly display a pop-up or other o
 
 When designing the site, words and images should be familiar to the real world. For example, icons and such should use objects or familiar symbols from the real world so that users know what they mean. Language should be plain and direct instead of technical.
 
+The site will likely have lots of icons which may want to use real icons to ease the user into understanding what they mean. The site may also need to speak directly to the end user, in which case language should not be technical but understandable to the average user.
+
 ### Error Prevention
 
-The system should always do what it can do prevent users from creating errors. For example, there should be indicators to as whether a user's input is correct and there should always be confirmation messages for irreversable or major actions.
+The system should always do what it can do prevent users from creating errors. For example, there should be indicators to as whether a user's input is correct and there should always be confirmation messages for irreversable or major actions. Users also shouldn't be able to input incorrect data.
 
-This is important to the site as it means users don't have to worry about causing errors themselves as the site will always give them a warnig.
+This is important to the site as it means users don't have to worry about causing errors themselves as the site will always give them a warning.
 
 -------------------------------------------------
 
@@ -216,6 +218,10 @@ To keep a consistent aesthetic throughout the site, I made sure the layout of ea
 
 To address the functionality implications which I laid out for my website, rigorous bug testing and boundary testing took place both by me and my end users. I tested every system on the website. To ensure the code works properly on all browsers, I ran the code through an HTML, PHP and CSS validator.
 
+![alt text](images/validate-3.png)
+![alt text](images/validate-2.png)
+![alt text](images/validate-4.png)
+
 ### Review of Usability Implications
 
 To address the useability of the website, I made sure to have a clean and refined design. One way in which I did this was to always have the header clear at the top with links to all of the main pages of the site which is something familiar to a lot of other websites. This also means users can always back out of a page by using the navigation menu at the top or by going back on their browser. The design is also consistent throughout the website with the buttons being consistent and clear and hyperlinks all being highlighted orange so users know when they can click one to go to another page. The site always has a header at the top of the page so users know what page they are on too.
@@ -277,9 +283,15 @@ To address the match between system and the real world, I used familiar language
 ![alt text](images/adminshield.png)
 ![alt text](images/moderatorshield.png)
 
+Furthermore, when displaying the last activity I didn't use a numerical date but instead clearly state to the user how long it has been since the last activity in seconds, minutes hours or days:
+
+![alt text](images/lastactivity.png)
+
 ### Error Prevention
 
 To prevent users from creating errors, I implemented a few systems. For example, whenever a major action is going to take place, the site has an ```hx-confirm``` message set:
 
 ![alt text](images/error-prev-1.png)
 ![alt text](images/error-prev-2.png)
+
+Furthermore, users cannot type in inputs or textareas for longer than the max length or shorter than the min length of whatever the input should be. This means users will not cause an error by inputting data that is either too short or too long for the database.

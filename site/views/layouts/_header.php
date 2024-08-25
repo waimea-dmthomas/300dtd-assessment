@@ -2,7 +2,7 @@
 
 <header id="main-header">
     
-    <img src="/images/icon.png"></img>
+    <img alt="PBS Forums Icon" src="/images/icon.png">
 
     <a href="/"><?= SITE_NAME ?></a>
 

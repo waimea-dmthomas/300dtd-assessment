@@ -12,11 +12,11 @@
     }
 
     // Load category list
-    echo '<section 
+    echo '<div 
         id="categories-list"
         hx-get="/forum"
         hx-trigger="load">';
-    echo '</section>';
+    echo '</div>';
 
     // Admin add category form
     if ($isAdmin) {

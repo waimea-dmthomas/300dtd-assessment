@@ -67,7 +67,7 @@ a[role="button"]:hover, button:hover, input[type="submit"]:hover, summary[role="
     background-size: 1rem;
 }
 
-.check-validity:user-valid {
+.check-validity:valid {
     --pico-border-color: var(--pico-form-element-valid-border-color);
     background-image: var(--pico-icon-valid);
     background-position: 98.5%;
@@ -251,7 +251,7 @@ main {
 }
 
 #topic-article:hover {
-    transform: scale(105%);
+    transform: scale(1.05);
     transition: 0.1s;
     background-color: var(--primary-hover);
 }
@@ -293,8 +293,7 @@ main {
 }
 
 #topic-timestamp {
-    display: flex;
-    align-items: left;
+    margin-right: auto;
 }
 
 #topic-article-op {
